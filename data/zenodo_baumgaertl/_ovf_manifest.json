@@ -1,0 +1,57 @@
+{
+  "source": "https://zenodo.org/records/7714181/files/Data_Reversal_of_nanomagnets_by_propagating_magnons.zip?download=1",
+  "doi": "10.5281/zenodo.7714181",
+  "licence": "CC-BY-4.0",
+  "members": [
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/PhaseDiagramN.npy",
+      "bytes": 5616,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__PhaseDiagramN.npy"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/SumFull1.npy",
+      "bytes": 13064,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__SumFull1.npy"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/SumFull2.npy",
+      "bytes": 13064,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__SumFull2.npy"
+    },
+    {
+      "member": "SupplementFig5/PhaseDiagramN.npy",
+      "bytes": 5616,
+      "saved_as": "SupplementFig5__PhaseDiagramN.npy"
+    },
+    {
+      "member": "SupplementFig5/SumFull1.npy",
+      "bytes": 16200,
+      "saved_as": "SupplementFig5__SumFull1.npy"
+    },
+    {
+      "member": "SupplementFig5/SumFull2.npy",
+      "bytes": 16200,
+      "saved_as": "SupplementFig5__SumFull2.npy"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/CPW32_40um.ovf",
+      "bytes": 3146449,
+      "saved_as": "SupplementFig6__Hys_S0.0__CPW32_40um.ovf"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/CPW32_40um.ovf",
+      "bytes": 3146449,
+      "saved_as": "SupplementFig6__Hys_S1.0__CPW32_40um.ovf"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/CPW32_40um.ovf",
+      "bytes": 3146449,
+      "saved_as": "SupplementFig6__Sat_S0.0__CPW32_40um.ovf"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/CPW32_40um.ovf",
+      "bytes": 3146449,
+      "saved_as": "SupplementFig6__Sat_S1.0__CPW32_40um.ovf"
+    }
+  ]
+}

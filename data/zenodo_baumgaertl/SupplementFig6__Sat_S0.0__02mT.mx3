@@ -1,0 +1,249 @@
+SetPBC(0, 0, 2048)
+
+SetGridsize(8192, 32, 1)
+SetCellsize(5e-9, 5e-9, 5e-9)
+OutputFormat=OVF2_TEXT
+
+
+Bn := -2.0e-3
+S := 0.00
+
+EdgeSmooth = 0
+i:=0
+c := rect(100e-9, 20e-9).transl(-5000e-9, 30e-9, 0)
+i++
+c1 := c.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c2 := c1.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c3 := c2.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c4 := c3.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c5 := c4.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c6 := c5.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c7 := c6.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c8 := c7.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c9 := c8.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c10 := c9.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c11 := c10.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c12 := c11.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c13 := c12.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c14 := c13.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c15 := c14.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c16 := c15.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c17 := c16.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c18 := c17.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c19 := c18.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c20 := c19.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c21 := c20.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c22 := c21.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c23 := c22.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c24 := c23.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c25 := c24.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c26 := c25.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c27 := c26.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c28 := c27.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c29 := c28.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c30 := c29.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c31 := c30.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c32 := c31.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c33 := c32.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c34 := c33.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c35 := c34.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c36 := c35.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c37 := c36.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c38 := c37.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c39 := c38.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c40 := c39.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c41 := c40.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c42 := c41.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c43 := c42.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c44 := c43.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c45 := c44.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c46 := c45.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c47 := c46.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c48 := c47.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c49 := c48.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c50 := c49.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+
+
+
+
+
+
+
+
+
+
+
+
+b:= rect(40960e-9, 100e-9).transl(0e-9, -30e-9, 0)
+setgeom(c50.add(b))
+saveas(geom, "YIG1")
+
+
+
+defregion(252, yrange(20e-9, inf))  // left half
+
+saveas(geom, "totGeom")
+
+Msat.setregion(252, 800e3)
+
+
+Aex.setregion(252, 13e-12)
+alpha.setregion(252, 0.01)
+
+
+
+
+
+
+
+//m.LoadFile("mStart.ovf")
+//saveas(m,"mStartNEW.ovf")
+
+// https://www.sciencedirect.com/science/article/pii/S0304885317306650
+nxp := 2.0
+mult := 2.0
+
+alstart := 0.0009 //alpha at start of ABL
+alstop := 0.08 //alpha at stop of ABL
+xstart := 40960-20480-2500 //x at start of ABL in nm
+xstop := 40960-20480 //x at stop of ABL in nm
+n := 2 //Polynomial order
+a := (alstop-alstart)/Pow((xstop-xstart), nxp) //Polynomial coefficient 
+cX := 5e-9 //Cellsize along x
+NB := ((xstop-xstart)*1e-9)/cX
+//No. of cells in ABL
+//Set the damping cellwise
+for i :=0; i<NB/mult; i++{
+    xcurr := xstart*1e-9 + i*cX*mult
+    DefRegion(i, (rect(cX*mult, 100e-9).transl(xcurr+(cX*mult)/2.,-30e-9, 0)).add(rect(cX*mult, 100e-9).transl(-xcurr-(cX*mult)/2., -30e-9, 0)))  
+    alp := a*Pow(((xcurr*1e9) - xstart), n)+alstart  // KB changed +alstart
+    alpha.setregion(i, alp)
+    Aex.setregion(i, 3.75e-12)
+    Msat.setregion(i, 140.0e3)
+
+}
+
+
+
+DefRegion(251, rect(40960e-9-5000e-9+10e-9, 100e-9).transl(0e-9, -30e-9, 0))
+alpha.setregion(251, 0.0009)
+Aex.setregion(251, 3.75e-12)
+Msat.setregion(251, 140.0e3)
+
+ext_scaleExchange(252, 251, S)
+
+
+m = Uniform(-0.01,-0.01, -1.0)
+Ba := -100.0e-3
+B_ext = vector(0.01*Ba, 0.01*Ba, Ba)
+minimize()
+MaxErr = 0.5e-7
+relax()
+
+saveas(m,"m_min100mT.ovf")
+saveas(B_ext,"Bext_min100mT.ovf")
+saveas(m_full,"m_full_min100mT")
+
+
+
+B_ext = vector(0.01*Bn, 0.01*Bn, Bn)
+MaxErr = 0.5e-7
+minimize()
+relax()
+
+
+saveas(m,"mStart.ovf")
+saveas(B_ext,"Bstart.ovf")
+saveas(m_full,"Mfull_start")
+save(B_eff)
+
+
+//SetSolver(2) // Heun
+//FixDt = 1e-15
+//MaxErr = 1e-7
+//MaxDt = 1e-12
+mx := m.Comp(0)
+
+//mx_center := CropX(mx, 3192, 5192)
+
+mx_center := CropY(mx, 0, 25)
+mx_center_line := CropY(mx, 10, 11)
+
+driv := 0.001/25.        // amplitude driving field 
+f    := 1.0e9            // frequency units 
+fdel := 20.*f*2.*pi   // frequency window 
+toff := 3./f              // offset 
+time := 12e-9
+
+
+ //B_ext = vector(0.1E-3+driv*sin( (t-toff)*fdel )/(2*pi*(t-toff)*fdel), 0.1E-3,30e-3) 
+B_ext.Add(LoadFile("CPW32_40um.ovf"),driv*sin( (t-toff)*fdel )/((t-toff)*fdel) )
+
+B_ext_Line := Crop(B_ext, 0, 8192, 0, 1, 0, 1)
+
+autosave(B_ext_Line, 10e-12)
+autosave(mx_center, 10e-12)
+autosave(mx_center_line, 5e-12)
+tableautosave(5e-12)
+//autosave(B_ext, 75e-12)
+run(time)
+saveas(m,"Finish.ovf")
+
+
+
+
+
+
+
+
+
+

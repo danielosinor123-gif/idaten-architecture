@@ -1,0 +1,22 @@
+# Core numerics / plotting
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+torch>=2.0
+pyscf==2.15.0
+
+# Layout
+gdstk==1.0.2
+klayout==0.30.13
+
+# Data acquisition
+remotezip>=0.12
+
+# Notebook environment
+jupyterlab>=4.0
+ipykernel>=6.29
+nbformat>=5.9
+nbclient>=0.9
+nbconvert>=7.16
+pandas>=2.0
+scikit-learn>=1.4

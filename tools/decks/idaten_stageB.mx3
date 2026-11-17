@@ -1,0 +1,90 @@
+// =====================================================================
+// Idaten Ce100 - Stage B: pattern-coded execution
+// =====================================================================
+// Derived from the authors' own MuMax3 deck structure and geometry:
+//   K. Baumgaertl & Grundler, Nat Commun 14, 1490 (2023)
+//   Zenodo 10.5281/zenodo.7714181  (CC-BY-4.0)
+//
+// YIG bus; Ni81Fe19 switching elements; 100 nm long on a = 200 nm pitch;
+// CPW edge antenna at the y = 0 edge (x = 2..6 um).
+//
+// WHAT THIS STAGE MEASURES
+//   Stage A establishes that a propagating magnon can lower the switching
+//   threshold of a nanomagnet. Stage B asks the next question: can the
+//   FABRICATED GEOMETRY (P0) shape the wave so that the resulting local
+//   amplitude pattern encodes a computation? This deck is the pattern test.
+//
+// THE CODE (P0)
+//   Six phase bands along x, each with a different local exchange stiffness
+//   (a 1-D phase grating etched into the waveguide). The code is in the
+//   FABRICATED GEOMETRY, not in a switch state - switch-addressed codes (Ck)
+//   are deliberately excluded from this first stage so that the two
+//   mechanisms can be measured separately.
+//
+// COARSE-GRAINING WARNING - STATED, NOT HIDDEN
+//   This deck runs on a 50 nm grid, so the published 100 x 20 nm element is
+//   coarse-grained to 100 x 50 nm (2 cells x 1 cell). The element LENGTH and
+//   the PITCH are exact; the WIDTH cannot be resolved below one cell.
+//   Coarse-graining the width changes the switching threshold, so this run
+//   measures the SPATIAL PATTERN only. The threshold itself is taken from
+//   literature (H_C2 33.4 -> 12.9 mT), not from this simulation.
+//
+// OUTPUT
+//   m.Comp(1) is the transverse (y) dynamic component, proportional to the
+//   local wave amplitude - this is exactly the quantity a threshold write
+//   stage would see.
+// =====================================================================
+
+SetGridSize(2000, 160, 1)
+SetCellSize(5e-08, 5e-08, 1.2e-06)
+OutputFormat = OVF2_TEXT
+
+// ---------------- global material: YIG (as in the lab series) -------------
+Msat  = 140000
+Aex   = 5e-12
+alpha = 0.0001
+
+// ---------------- P0: the phase-code landscape ----------------------------
+// ncode phase bands along x, each with a different local exchange stiffness.
+// A 1-D phase grating etched into the waveguide. Bands span y = 0..4 um,
+// which is where the CPW-launched wave is strongest.
+ncode := 6
+for k := 0; k < ncode; k++ {
+    xc := (12e-6 + k*5e-6)
+    DefRegion(10+k, rect(5e-6, 4e-6).transl(xc, 2e-6, 0))
+    Aex.setregion(10+k, (1.0 - 0.12*k) * 5e-12)
+}
+
+// ---------------- M_k: the result elements --------------------------------
+// Ni81Fe19, 100 nm x 50 nm (coarse-grained width - see header), pitch
+// a = 200 nm, placed downstream of the code so the pattern formed by P0
+// lands on them. Exchange to the bus is switched off (S = 0), as in the
+// published experiment, where the elements are physically separate.
+magcount := 64
+mags := rect(100e-9, 50e-9).transl(60e-6, 2e-6, 0)
+for i := 1; i < magcount; i++ {
+    mags = mags.add(rect(100e-9, 50e-9).transl(60e-6 + i*200e-9, 2e-6, 0))
+}
+DefRegion(252, mags)
+Msat.setregion(252, 800.0e3)
+Aex.setregion(252, 13.0e-12)
+alpha.setregion(252, 0.01)
+ext_scaleExchange(252, 0, 0.0)
+
+// ---------------- initial state, bias -------------------------------------
+m = Uniform(1, 0, 0)
+B_ext = vector(20e-3, 0, 0)
+relax()
+
+// ---------------- drive: burst from the CPW edge antenna -------------------
+f0 := 1.70e9
+B_ext.Add(LoadFile("antenna.ovf"), 1e-3 * sin(2*pi*f0*t) *
+    (tanh((t-0.5e-9)/0.1e-9) - tanh((t-3e-9)/0.1e-9)))
+
+// ---------------- run ------------------------------------------------------
+for i := 0; i < 40; i++ {
+    for j := 0; j < 25; j++ {
+        run(2e-12)
+    }
+    save(m.Comp(1))
+}

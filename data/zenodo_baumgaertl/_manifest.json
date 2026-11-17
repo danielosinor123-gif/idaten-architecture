@@ -1,0 +1,763 @@
+{
+  "source": "https://zenodo.org/records/7714181/files/Data_Reversal_of_nanomagnets_by_propagating_magnons.zip?download=1",
+  "doi": "10.5281/zenodo.7714181",
+  "paper": "Baumgaertl & Grundler, Nat Commun 14, 1490 (2023)",
+  "licence": "CC-BY-4.0",
+  "members": [
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/1.5/Pre/Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_RealData.py",
+      "bytes": 12505,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__1.5__Pre__Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_RealData.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/1.75/PowerDepS21_linescan.py",
+      "bytes": 7272,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__1.75__PowerDepS21_linescan.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/1.75/PowerDepS21_linescanTrashholdUpdated.py",
+      "bytes": 11337,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__1.75__PowerDepS21_linescanTrashholdUpdated.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/1.75/PowerDepS21_pyImport - Copy.py",
+      "bytes": 5738,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__1.75__PowerDepS21_pyImport - Copy.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/1.75/TrashholdUpdated.py",
+      "bytes": 5771,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__1.75__TrashholdUpdated.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/4.75/PowerDepS21_linescan.py",
+      "bytes": 6259,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__4.75__PowerDepS21_linescan.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/4.75/PowerDepS21_pyImport - Copy.py",
+      "bytes": 5426,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__4.75__PowerDepS21_pyImport - Copy.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/CreateMeasFiles.py",
+      "bytes": 2835,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__CreateMeasFiles.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/PlotFig1f.py",
+      "bytes": 3122,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__PlotFig1f.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/PlotFig1g.py",
+      "bytes": 3360,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__PlotFig1g.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/PowerDepS21_batch_amplitudes14_updated.py",
+      "bytes": 12824,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__PowerDepS21_batch_amplitudes14_updated.py"
+    },
+    {
+      "member": "Fig.1/Fig.1f,g/Phasediagram14mT/RawDataEvaluation.py",
+      "bytes": 8518,
+      "saved_as": "Fig.1__Fig.1f,g__Phasediagram14mT__RawDataEvaluation.py"
+    },
+    {
+      "member": "Fig.1/Fig.1h/05RefPowerParNeg/LineplotFig1h.py",
+      "bytes": 13438,
+      "saved_as": "Fig.1__Fig.1h__05RefPowerParNeg__LineplotFig1h.py"
+    },
+    {
+      "member": "Fig.1/Fig.1h/05RefPowerParNeg/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py",
+      "bytes": 10943,
+      "saved_as": "Fig.1__Fig.1h__05RefPowerParNeg__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py"
+    },
+    {
+      "member": "Fig.1/Fig.1i/04RedPowerPar/LineplotFig1i.py",
+      "bytes": 13332,
+      "saved_as": "Fig.1__Fig.1i__04RedPowerPar__LineplotFig1i.py"
+    },
+    {
+      "member": "Fig.1/Fig.1i/04RedPowerPar/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey.py",
+      "bytes": 9722,
+      "saved_as": "Fig.1__Fig.1i__04RedPowerPar__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey.py"
+    },
+    {
+      "member": "Fig.1/Fig.1i/04RedPowerPar/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12085,
+      "saved_as": "Fig.1__Fig.1i__04RedPowerPar__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/PlottingSwitchingPowersManuscript/Fig3a_plot.py",
+      "bytes": 3865,
+      "saved_as": "Fig.3__PlottingSwitchingPowersManuscript__Fig3a_plot.py"
+    },
+    {
+      "member": "Fig.3/PlottingSwitchingPowersManuscript/Fig3b.py",
+      "bytes": 4041,
+      "saved_as": "Fig.3__PlottingSwitchingPowersManuscript__Fig3b.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/0dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 11641,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__0dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/0dBm/test_FMR_analysis_S21_same_scalePy3.7v3Old.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__0dBm__test_FMR_analysis_S21_same_scalePy3.7v3Old.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-10dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-10dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-11dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-11dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-12dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-12dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-13dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-13dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-14dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-14dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-15dBm/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py",
+      "bytes": 11001,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-15dBm__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-15dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-15dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-16dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-16dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-17dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-17dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-18dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-18dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-19dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-19dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-20dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-20dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-25dBm/Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_RealData - Copy.py",
+      "bytes": 12752,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-25dBm__Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_RealData - Copy.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-25dBm/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py",
+      "bytes": 11001,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-25dBm__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/5dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__5dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-5dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 11641,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-5dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-5dBm/test_FMR_analysis_S21_same_scalePy3.7v3Old.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-5dBm__test_FMR_analysis_S21_same_scalePy3.7v3Old.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/-9dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__-9dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationNonLinearity/EvalNonLinearS11.py",
+      "bytes": 7569,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationNonLinearity__EvalNonLinearS11.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS11/FigS3c.py",
+      "bytes": 5422,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS11__FigS3c.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS11/PlottingMW.py",
+      "bytes": 5400,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS11__PlottingMW.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS11/PlottingMW_nonLinear.py",
+      "bytes": 4861,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS11__PlottingMW_nonLinear.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS11/SwitchingFIeldS11interactivePlot_FittingN.py",
+      "bytes": 17631,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS11__SwitchingFIeldS11interactivePlot_FittingN.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS21/-25dBm_SwitchingFIeldS21interactivePlot_FittingN.py",
+      "bytes": 15475,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS21__-25dBm_SwitchingFIeldS21interactivePlot_FittingN.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS21/Plotting.py",
+      "bytes": 3304,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS21__Plotting.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS21/PlottingMW.py",
+      "bytes": 5273,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS21__PlottingMW.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/EvaluationSwitchingS21/PlottingMW_nonLinear.py",
+      "bytes": 4861,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__EvaluationSwitchingS21__PlottingMW_nonLinear.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/SwitchingFIeldS21.py",
+      "bytes": 13277,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__SwitchingFIeldS21.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/SwitchingFIeldS21interactivePlot.py",
+      "bytes": 12815,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__SwitchingFIeldS21interactivePlot.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/SwitchingFIeldS21interactivePlot_Fitting.py",
+      "bytes": 10521,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__SwitchingFIeldS21interactivePlot_Fitting.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDep.py",
+      "bytes": 10972,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDep.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt - Copy.py",
+      "bytes": 12537,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt - Copy.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt - Copy_S11.py",
+      "bytes": 14030,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt - Copy_S11.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py",
+      "bytes": 12189,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGrey_PowerDepNoFIlt.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers/SwitchingDIfferentPowers/test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGreyS11paper.py",
+      "bytes": 10980,
+      "saved_as": "Fig.3__SwitchingDifferentPowers__SwitchingDIfferentPowers__test_FMR_analysis_S21_same_scalePy3.7v3 - Real_FFT_filter_2D_S21_MagnitudeGreyS11paper.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/0dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 11641,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__0dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/0dBm/test_FMR_analysis_S21_same_scalePy3.7v3Old.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__0dBm__test_FMR_analysis_S21_same_scalePy3.7v3Old.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-10dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-10dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-11dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-11dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-12dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-12dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-13dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-13dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-14dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-14dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-15dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-15dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-16dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-16dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-17dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-17dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-18dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-18dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-19dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-19dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-20dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-20dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/5dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__5dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-5dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 11641,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-5dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-5dBm/test_FMR_analysis_S21_same_scalePy3.7v3Old.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-5dBm__test_FMR_analysis_S21_same_scalePy3.7v3Old.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/-9dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 12090,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__-9dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/EvaluationNonLinearity/EvalNonLinearS11.py",
+      "bytes": 7569,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__EvaluationNonLinearity__EvalNonLinearS11.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/EvaluationSwitchingS21/-25dBm_SwitchingFIeldS21interactivePlot_FittingN.py",
+      "bytes": 15278,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__EvaluationSwitchingS21__-25dBm_SwitchingFIeldS21interactivePlot_FittingN.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/EvaluationSwitchingS21/-25dBm_SwitchingFIeldS21interactivePlot_FittingN2.py",
+      "bytes": 15192,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__EvaluationSwitchingS21__-25dBm_SwitchingFIeldS21interactivePlot_FittingN2.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/EvaluationSwitchingS21/PlottingMW.py",
+      "bytes": 5277,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__EvaluationSwitchingS21__PlottingMW.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/Plot_FFT_filtered_FieldScan.py",
+      "bytes": 9326,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__Plot_FFT_filtered_FieldScan.py"
+    },
+    {
+      "member": "Fig.3/SwitchingDifferentPowers2/SwitchingDIfferentPowers2/wavelengthFieldscan.py",
+      "bytes": 7566,
+      "saved_as": "Fig.3__SwitchingDifferentPowers2__SwitchingDIfferentPowers2__wavelengthFieldscan.py"
+    },
+    {
+      "member": "SupplementFig2/Example_14mT_1.75_to2.0GHz/PowerDepS21_Linescan.py",
+      "bytes": 10698,
+      "saved_as": "SupplementFig2__Example_14mT_1.75_to2.0GHz__PowerDepS21_Linescan.py"
+    },
+    {
+      "member": "SupplementFig2/Example_14mT_1.75_to2.0GHz/TrashholdUpdated.py",
+      "bytes": 5771,
+      "saved_as": "SupplementFig2__Example_14mT_1.75_to2.0GHz__TrashholdUpdated.py"
+    },
+    {
+      "member": "SupplementFig4/EvalNonLinearS11_plotManuscript.py",
+      "bytes": 4653,
+      "saved_as": "SupplementFig4__EvalNonLinearS11_plotManuscript.py"
+    },
+    {
+      "member": "SupplementFig5/1.5/PowerDepS21_linescanTrashholdUpdated.py",
+      "bytes": 11370,
+      "saved_as": "SupplementFig5__1.5__PowerDepS21_linescanTrashholdUpdated.py"
+    },
+    {
+      "member": "SupplementFig5/1.75/PowerDepS21_linescan.py",
+      "bytes": 6324,
+      "saved_as": "SupplementFig5__1.75__PowerDepS21_linescan.py"
+    },
+    {
+      "member": "SupplementFig5/1.75/PowerDepS21_linescanTrashholdUpdated.py",
+      "bytes": 11370,
+      "saved_as": "SupplementFig5__1.75__PowerDepS21_linescanTrashholdUpdated.py"
+    },
+    {
+      "member": "SupplementFig5/1.75/PowerDepS21_pyImport - Copy.py",
+      "bytes": 5426,
+      "saved_as": "SupplementFig5__1.75__PowerDepS21_pyImport - Copy.py"
+    },
+    {
+      "member": "SupplementFig5/BarPlotComp.py",
+      "bytes": 2627,
+      "saved_as": "SupplementFig5__BarPlotComp.py"
+    },
+    {
+      "member": "SupplementFig5/CreateMeasFiles.py",
+      "bytes": 2836,
+      "saved_as": "SupplementFig5__CreateMeasFiles.py"
+    },
+    {
+      "member": "SupplementFig5/PowerDepS21_batch_amplitudes14_updated.py",
+      "bytes": 13006,
+      "saved_as": "SupplementFig5__PowerDepS21_batch_amplitudes14_updated.py"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/02mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S0.0__02mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/04mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S0.0__04mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/06mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S0.0__06mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/08mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S0.0__08mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/10mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__10mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/12mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__12mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/14mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__14mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/16mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__16mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/18mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__18mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/20mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__20mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/22mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__22mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/24mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S0.0__24mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/FFT_Bulk1.py",
+      "bytes": 7622,
+      "saved_as": "SupplementFig6__Hys_S0.0__FFT_Bulk1.py"
+    },
+    {
+      "member": "SupplementFig6/Hys_S0.0/PlotImage36mT1.py",
+      "bytes": 3693,
+      "saved_as": "SupplementFig6__Hys_S0.0__PlotImage36mT1.py"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/02mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S1.0__02mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/04mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S1.0__04mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/06mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S1.0__06mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/08mT.mx3",
+      "bytes": 6782,
+      "saved_as": "SupplementFig6__Hys_S1.0__08mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/10mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__10mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/12mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__12mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/14mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__14mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/16mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__16mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/18mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__18mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/20mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__20mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/22mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__22mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/24mT.mx3",
+      "bytes": 6783,
+      "saved_as": "SupplementFig6__Hys_S1.0__24mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/FFT_Bulk1.py",
+      "bytes": 7622,
+      "saved_as": "SupplementFig6__Hys_S1.0__FFT_Bulk1.py"
+    },
+    {
+      "member": "SupplementFig6/Hys_S1.0/PlotImage36mT1.py",
+      "bytes": 3693,
+      "saved_as": "SupplementFig6__Hys_S1.0__PlotImage36mT1.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/02mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S0.0__02mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/04mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S0.0__04mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/06mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S0.0__06mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/08mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S0.0__08mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/10mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__10mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/12mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__12mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/14mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__14mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/16mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__16mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/18mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__18mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/20mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__20mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/22mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__22mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/24mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S0.0__24mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/FFT_Bulk1.py",
+      "bytes": 7622,
+      "saved_as": "SupplementFig6__Sat_S0.0__FFT_Bulk1.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/PlotImage36mT.py",
+      "bytes": 2599,
+      "saved_as": "SupplementFig6__Sat_S0.0__PlotImage36mT.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S0.0/PlotImage36mT1.py",
+      "bytes": 3693,
+      "saved_as": "SupplementFig6__Sat_S0.0__PlotImage36mT1.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/02mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S1.0__02mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/04mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S1.0__04mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/06mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S1.0__06mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/08mT.mx3",
+      "bytes": 6786,
+      "saved_as": "SupplementFig6__Sat_S1.0__08mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/10mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__10mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/12mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__12mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/14mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__14mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/16mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__16mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/18mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__18mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/20mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__20mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/22mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__22mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/24mT.mx3",
+      "bytes": 6787,
+      "saved_as": "SupplementFig6__Sat_S1.0__24mT.mx3"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/FFT_Bulk1.py",
+      "bytes": 7622,
+      "saved_as": "SupplementFig6__Sat_S1.0__FFT_Bulk1.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/PlotImage36mT.py",
+      "bytes": 2599,
+      "saved_as": "SupplementFig6__Sat_S1.0__PlotImage36mT.py"
+    },
+    {
+      "member": "SupplementFig6/Sat_S1.0/PlotImage36mT1.py",
+      "bytes": 3693,
+      "saved_as": "SupplementFig6__Sat_S1.0__PlotImage36mT1.py"
+    },
+    {
+      "member": "SupplementFig7/02_500mT_-20dBm/LinearFit.py",
+      "bytes": 1464,
+      "saved_as": "SupplementFig7__02_500mT_-20dBm__LinearFit.py"
+    },
+    {
+      "member": "SupplementFig7/02_500mT_-20dBm/LinearFitM.py",
+      "bytes": 1293,
+      "saved_as": "SupplementFig7__02_500mT_-20dBm__LinearFitM.py"
+    },
+    {
+      "member": "SupplementFig7/02_500mT_-20dBm/Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_withoutNextNeighbourFit_RealDirectImport.py",
+      "bytes": 6083,
+      "saved_as": "SupplementFig7__02_500mT_-20dBm__Lineplot_SameLenghscale3-8GHzMod_comparisonNextNeigh_S!!_S21_Comparison_withoutNextNeighbourFit_RealDirectImport.py"
+    },
+    {
+      "member": "SupplementFig7/02_500mT_-20dBm/test_FMR_analysis_S21_same_scalePy3.7v3.py",
+      "bytes": 11640,
+      "saved_as": "SupplementFig7__02_500mT_-20dBm__test_FMR_analysis_S21_same_scalePy3.7v3.py"
+    }
+  ]
+}

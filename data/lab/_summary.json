@@ -1,0 +1,1607 @@
+{
+ "BiYIG_a1e-4_2G": {
+  "archive_MB": 12.88,
+  "bad_files": [],
+  "deck": {
+   "Aex": "4.5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "130000",
+   "alpha": "0.0001",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 85.625,
+   "contrast_peak_to_valley": 0.9944064617156982,
+   "dt_snapshot_ns": 0.5869092879664707,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 261.18958366710154,
+   "ell_peak_x10_50_um": 213.407109630095,
+   "ell_peak_x15_45_um": 240.70210272183135,
+   "ell_peak_x5_45_um": 214.36723818183393,
+   "ell_rms_localpeak_x10_45_um": 63.45948935498346,
+   "ell_rms_x10_45_um": 150.19461611571407,
+   "ell_rms_x10_50_um": 122.62064445900567,
+   "ell_rms_x15_45_um": 136.71418622823063,
+   "ell_rms_x5_45_um": 132.87767847748685,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 52.275,
+   "r2_peak_localpeak_x10_45": 0.5978581062233781,
+   "r2_peak_x10_45": 0.0005728230452058947,
+   "r2_peak_x10_50": 0.0011301032823526347,
+   "r2_peak_x15_45": 0.0004940273953963903,
+   "r2_peak_x5_45": 0.0011200581581752855,
+   "r2_rms_localpeak_x10_45": 0.5458556900091247,
+   "r2_rms_x10_45": 0.0019272272324283302,
+   "r2_rms_x10_50": 0.00393020792099108,
+   "r2_rms_x15_45": 0.0017275062219804793,
+   "r2_rms_x5_45": 0.0032201812726296852,
+   "t_first_ns": 0.48930222585593813,
+   "t_last_ns": 246.51486215622126,
+   "wavefront_r2": 0.0029251941944490323,
+   "wavefront_slope_um_per_s": -27561404.24301461
+  },
+  "seconds": 31.2,
+  "snapshots": 400
+ },
+ "Co25Fe75_a2e-3_10G": {
+  "archive_MB": 13.19,
+  "bad_files": [],
+  "deck": {
+   "Aex": "3e-11",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "1.6e+06",
+   "alpha": "0.002",
+   "f0_Hz": 10000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 18.125,
+   "contrast_peak_to_valley": 0.9982936978340149,
+   "dt_snapshot_ns": 0.12379242631217686,
+   "ell_peak_localpeak_x10_45_um": 7902.283770549781,
+   "ell_peak_x10_45_um": Infinity,
+   "ell_peak_x10_50_um": Infinity,
+   "ell_peak_x15_45_um": 5054.46577810813,
+   "ell_peak_x5_45_um": Infinity,
+   "ell_rms_localpeak_x10_45_um": 70.25369188987821,
+   "ell_rms_x10_45_um": Infinity,
+   "ell_rms_x10_50_um": Infinity,
+   "ell_rms_x15_45_um": 13038.983870646789,
+   "ell_rms_x5_45_um": Infinity,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 71.57499999999999,
+   "r2_peak_localpeak_x10_45": 0.1896478593749834,
+   "r2_peak_x10_45": 2.2107956184846955e-05,
+   "r2_peak_x10_50": 1.7708316882858455e-06,
+   "r2_peak_x15_45": 4.965449477145611e-07,
+   "r2_peak_x5_45": 0.00012273093146997205,
+   "r2_rms_localpeak_x10_45": 0.6618934897065829,
+   "r2_rms_x10_45": 7.20890862712098e-05,
+   "r2_rms_x10_50": 1.80913529429505e-05,
+   "r2_rms_x15_45": 1.3852443303541406e-07,
+   "r2_rms_x5_45": 0.0005243743415909163,
+   "t_first_ns": 0.12811327645867288,
+   "t_last_ns": 46.447149734603194,
+   "wavefront_r2": 0.26500355873357373,
+   "wavefront_slope_um_per_s": -771005569.8075804
+  },
+  "seconds": 25.4,
+  "snapshots": 400
+ },
+ "Co25Fe75_a2e-3_2G": {
+  "archive_MB": 13.28,
+  "bad_files": [],
+  "deck": {
+   "Aex": "3e-11",
+   "B_ext": "vector(5e-3, 0, 0)",
+   "Msat": "1.6e+06",
+   "alpha": "0.002",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 18.125,
+   "contrast_peak_to_valley": 0.9986598491668701,
+   "dt_snapshot_ns": 0.14316495520556885,
+   "ell_peak_localpeak_x10_45_um": 855.2739786729079,
+   "ell_peak_x10_45_um": Infinity,
+   "ell_peak_x10_50_um": Infinity,
+   "ell_peak_x15_45_um": Infinity,
+   "ell_peak_x5_45_um": Infinity,
+   "ell_rms_localpeak_x10_45_um": 77.53849285389862,
+   "ell_rms_x10_45_um": Infinity,
+   "ell_rms_x10_50_um": Infinity,
+   "ell_rms_x15_45_um": Infinity,
+   "ell_rms_x5_45_um": Infinity,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 94.675,
+   "r2_peak_localpeak_x10_45": 0.255885770209339,
+   "r2_peak_x10_45": 0.0005713601805182877,
+   "r2_peak_x10_50": 0.00041757405316800167,
+   "r2_peak_x15_45": 0.00016244394947528829,
+   "r2_peak_x5_45": 0.0014729658269795332,
+   "r2_rms_localpeak_x10_45": 0.4498596557198056,
+   "r2_rms_x10_45": 0.0018178454711985648,
+   "r2_rms_x10_50": 0.001599792228709096,
+   "r2_rms_x15_45": 0.0006812286157168446,
+   "r2_rms_x5_45": 0.004570734456817882,
+   "t_first_ns": 0.11192844708000312,
+   "t_last_ns": 47.276463674526845,
+   "wavefront_r2": 0.5598884603290315,
+   "wavefront_slope_um_per_s": -43503760.03097235
+  },
+  "seconds": 11.1,
+  "snapshots": 400
+ },
+ "Co25Fe75_a2e-3_5G": {
+  "archive_MB": 13.19,
+  "bad_files": [],
+  "deck": {
+   "Aex": "3e-11",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "1.6e+06",
+   "alpha": "0.002",
+   "f0_Hz": 5000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 83.125,
+   "contrast_peak_to_valley": 0.9982782006263733,
+   "dt_snapshot_ns": 0.0976715028184738,
+   "ell_peak_localpeak_x10_45_um": 5864.326944177071,
+   "ell_peak_x10_45_um": Infinity,
+   "ell_peak_x10_50_um": 2244.598130054781,
+   "ell_peak_x15_45_um": 762.8400875694545,
+   "ell_peak_x5_45_um": Infinity,
+   "ell_rms_localpeak_x10_45_um": 71.67831219253031,
+   "ell_rms_x10_45_um": Infinity,
+   "ell_rms_x10_50_um": 4754.923238622012,
+   "ell_rms_x15_45_um": 742.1499743674302,
+   "ell_rms_x5_45_um": Infinity,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 62.17499999999999,
+   "r2_peak_localpeak_x10_45": 0.2945342453927622,
+   "r2_peak_x10_45": 1.7406877467207593e-06,
+   "r2_peak_x10_50": 4.6477189101779e-06,
+   "r2_peak_x15_45": 2.2594315933988085e-05,
+   "r2_peak_x5_45": 5.654862584003606e-05,
+   "r2_rms_localpeak_x10_45": 0.569302222713153,
+   "r2_rms_x10_45": 2.0920973909266394e-05,
+   "r2_rms_x10_50": 1.0133883047158676e-06,
+   "r2_rms_x15_45": 2.314693156824088e-05,
+   "r2_rms_x5_45": 0.000360946881570956,
+   "t_first_ns": 0.12261120028206662,
+   "t_last_ns": 44.30096192352657,
+   "wavefront_r2": 0.2355009855136394,
+   "wavefront_slope_um_per_s": -660205528.5528271
+  },
+  "seconds": 14.2,
+  "snapshots": 400
+ },
+ "Co25Fe75_pma_5G": {
+  "archive_MB": 0.02,
+  "bad_files": [],
+  "deck": {
+   "Aex": "3e-11",
+   "B_ext": "vector(0, 0, 20e-3)",
+   "Msat": "1.6e+06",
+   "alpha": "0.002",
+   "f0_Hz": 5000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 8.025,
+   "contrast_peak_to_valley": 0.0,
+   "dt_snapshot_ns": 0.0,
+   "ell_peak_localpeak_x10_45_um": NaN,
+   "ell_peak_x10_45_um": NaN,
+   "ell_peak_x10_50_um": NaN,
+   "ell_peak_x15_45_um": NaN,
+   "ell_peak_x5_45_um": NaN,
+   "ell_rms_localpeak_x10_45_um": NaN,
+   "ell_rms_x10_45_um": NaN,
+   "ell_rms_x10_50_um": NaN,
+   "ell_rms_x15_45_um": NaN,
+   "ell_rms_x5_45_um": NaN,
+   "n_peak_x10_45": 0,
+   "n_peak_x10_50": 0,
+   "n_peak_x15_45": 0,
+   "n_peak_x5_45": 0,
+   "n_rms_x10_45": 0,
+   "n_rms_x10_50": 0,
+   "n_rms_x15_45": 0,
+   "n_rms_x5_45": 0,
+   "node_x_um": 8.025,
+   "r2_peak_localpeak_x10_45": NaN,
+   "r2_peak_x10_45": NaN,
+   "r2_peak_x10_50": NaN,
+   "r2_peak_x15_45": NaN,
+   "r2_peak_x5_45": NaN,
+   "r2_rms_localpeak_x10_45": NaN,
+   "r2_rms_x10_45": NaN,
+   "r2_rms_x10_50": NaN,
+   "r2_rms_x15_45": NaN,
+   "r2_rms_x5_45": NaN,
+   "t_first_ns": 1.5474250491067256e+20,
+   "t_last_ns": 1.5474250491067256e+20,
+   "wavefront_r2": -48.0,
+   "wavefront_slope_um_per_s": 1.6155871338926304e-13
+  },
+  "seconds": 13.9,
+  "snapshots": 400
+ },
+ "GdFeCoP_a1e-3_10G": {
+  "archive_MB": 13.1,
+  "bad_files": [],
+  "deck": {
+   "Aex": "8e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "150000",
+   "alpha": "0.001",
+   "f0_Hz": 10000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 85.625,
+   "contrast_peak_to_valley": 0.9992411732673645,
+   "dt_snapshot_ns": 0.4937486388410666,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 108.17779037664178,
+   "ell_peak_x10_50_um": 85.38940893785768,
+   "ell_peak_x15_45_um": 91.06415247790062,
+   "ell_peak_x5_45_um": 139.9137803218919,
+   "ell_rms_localpeak_x10_45_um": 57.717855581156876,
+   "ell_rms_x10_45_um": 74.54210298127299,
+   "ell_rms_x10_50_um": 60.51986333485265,
+   "ell_rms_x15_45_um": 63.97591520394352,
+   "ell_rms_x5_45_um": 93.59788280276797,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 94.725,
+   "r2_peak_localpeak_x10_45": 0.3440255238639801,
+   "r2_peak_x10_45": 0.0018770241450234426,
+   "r2_peak_x10_50": 0.003962657373142164,
+   "r2_peak_x15_45": 0.0019465572220112026,
+   "r2_peak_x5_45": 0.001464018879175466,
+   "r2_rms_localpeak_x10_45": 0.5854331672188806,
+   "r2_rms_x10_45": 0.004183445144271825,
+   "r2_rms_x10_50": 0.008526757826180065,
+   "r2_rms_x15_45": 0.004220433274124358,
+   "r2_rms_x5_45": 0.003436786972719985,
+   "t_first_ns": 0.5686531136510731,
+   "t_last_ns": 198.35179639642723,
+   "wavefront_r2": 0.00658983578766037,
+   "wavefront_slope_um_per_s": -49977598.59368625
+  },
+  "seconds": 11.7,
+  "snapshots": 400
+ },
+ "GdFeCoP_a1e-3_5G": {
+  "archive_MB": 14.41,
+  "bad_files": [],
+  "deck": {
+   "Aex": "8e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "150000",
+   "alpha": "0.001",
+   "f0_Hz": 5000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 85.625,
+   "contrast_peak_to_valley": 0.9988582730293274,
+   "dt_snapshot_ns": 0.4866171643765207,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 121.96867043637042,
+   "ell_peak_x10_50_um": 98.6467255236753,
+   "ell_peak_x15_45_um": 102.80560746803778,
+   "ell_peak_x5_45_um": 163.08416714833461,
+   "ell_rms_localpeak_x10_45_um": 57.6697779662609,
+   "ell_rms_x10_45_um": 84.48958389692729,
+   "ell_rms_x10_50_um": 69.2418134568986,
+   "ell_rms_x15_45_um": 72.3754094228606,
+   "ell_rms_x5_45_um": 107.60856971071398,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 94.075,
+   "r2_peak_localpeak_x10_45": 0.3392564725753059,
+   "r2_peak_x10_45": 0.0016248484693573984,
+   "r2_peak_x10_50": 0.0032739011869604706,
+   "r2_peak_x15_45": 0.001680287908079614,
+   "r2_peak_x5_45": 0.0011852001959615777,
+   "r2_rms_localpeak_x10_45": 0.5853322096146908,
+   "r2_rms_x10_45": 0.0036715899293163767,
+   "r2_rms_x10_50": 0.007371017658546197,
+   "r2_rms_x15_45": 0.0037203118682476166,
+   "r2_rms_x5_45": 0.002930179861374782,
+   "t_first_ns": 0.4107732307963802,
+   "t_last_ns": 198.407148361903,
+   "wavefront_r2": 0.00015148272262144324,
+   "wavefront_slope_um_per_s": -7636814.625796906
+  },
+  "seconds": 75.4,
+  "snapshots": 400
+ },
+ "NiFe_a1e-2_5G": {
+  "archive_MB": 14.41,
+  "bad_files": [],
+  "deck": {
+   "Aex": "1.3e-11",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "800000",
+   "alpha": "0.01",
+   "f0_Hz": 5000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 69.37499999999999,
+   "contrast_peak_to_valley": 0.9998868107795715,
+   "dt_snapshot_ns": 0.2108438280713709,
+   "ell_peak_localpeak_x10_45_um": 1664.9537276063631,
+   "ell_peak_x10_45_um": 132.18225244845925,
+   "ell_peak_x10_50_um": 118.32536590243444,
+   "ell_peak_x15_45_um": 121.29956407412546,
+   "ell_peak_x5_45_um": 153.41065508586453,
+   "ell_rms_localpeak_x10_45_um": Infinity,
+   "ell_rms_x10_45_um": 91.14256918864172,
+   "ell_rms_x10_50_um": 83.18300129323372,
+   "ell_rms_x15_45_um": 78.63040902198543,
+   "ell_rms_x5_45_um": 121.57507207482583,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 57.175,
+   "r2_peak_localpeak_x10_45": 0.25767909792965304,
+   "r2_peak_x10_45": 0.0006359976896187503,
+   "r2_peak_x10_50": 0.0010173629451469823,
+   "r2_peak_x15_45": 0.0005467625956043776,
+   "r2_peak_x5_45": 0.0006252178809296183,
+   "r2_rms_localpeak_x10_45": 0.09354995750619632,
+   "r2_rms_x10_45": 0.0013664393909281758,
+   "r2_rms_x10_50": 0.0020957884996214426,
+   "r2_rms_x15_45": 0.0013245470096969747,
+   "r2_rms_x5_45": 0.0010261324034783748,
+   "t_first_ns": 0.13798898823591832,
+   "t_last_ns": 101.93416727338519,
+   "wavefront_r2": 0.37147697520933576,
+   "wavefront_slope_um_per_s": -22535679.443778556
+  },
+  "seconds": 43.2,
+  "snapshots": 400
+ },
+ "YIG_a1e-3_2G": {
+  "archive_MB": 14.41,
+  "bad_files": [],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "140000",
+   "alpha": "0.001",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 14.375,
+   "contrast_peak_to_valley": 0.9985392093658447,
+   "dt_snapshot_ns": 0.6825230454139597,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 130.21536958641678,
+   "ell_peak_x10_50_um": 108.04459389598347,
+   "ell_peak_x15_45_um": 112.56140337948844,
+   "ell_peak_x5_45_um": 158.04945964310673,
+   "ell_rms_localpeak_x10_45_um": 61.35619912803198,
+   "ell_rms_x10_45_um": 86.84383179297129,
+   "ell_rms_x10_50_um": 71.96136115808885,
+   "ell_rms_x15_45_um": 76.3082713946901,
+   "ell_rms_x5_45_um": 102.2952653351204,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 50.975,
+   "r2_peak_localpeak_x10_45": 0.5344586672587706,
+   "r2_peak_x10_45": 0.0014885918587047575,
+   "r2_peak_x10_50": 0.0028451478475066683,
+   "r2_peak_x15_45": 0.0014627749777861299,
+   "r2_peak_x5_45": 0.0013211021785912713,
+   "r2_rms_localpeak_x10_45": 0.5689983015580977,
+   "r2_rms_x10_45": 0.0035748276907666687,
+   "r2_rms_x10_50": 0.0070264943618938425,
+   "r2_rms_x15_45": 0.003439499101804966,
+   "r2_rms_x5_45": 0.0033452689443982386,
+   "t_first_ns": 0.5367140112389358,
+   "t_last_ns": 277.0605300271515,
+   "wavefront_r2": 0.0031676520504967387,
+   "wavefront_slope_um_per_s": -25739764.272397723
+  },
+  "seconds": 36.7,
+  "snapshots": 400
+ },
+ "YIG_a1e-3_2G_w2": {
+  "bad_files": [],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "140000",
+   "alpha": "0.001",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {},
+  "seconds": 0.0,
+  "snapshots": 0
+ },
+ "YIG_a1e-3_3G": {
+  "archive_MB": 14.41,
+  "bad_files": [],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "140000",
+   "alpha": "0.001",
+   "f0_Hz": 3000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 14.375,
+   "contrast_peak_to_valley": 0.9983824491500854,
+   "dt_snapshot_ns": 0.6914858239490513,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 128.63726553483883,
+   "ell_peak_x10_50_um": 104.58563248566581,
+   "ell_peak_x15_45_um": 117.61264110100754,
+   "ell_peak_x5_45_um": 139.92403983382977,
+   "ell_rms_localpeak_x10_45_um": 61.17955680034069,
+   "ell_rms_x10_45_um": 84.55045813864939,
+   "ell_rms_x10_50_um": 68.64197526172414,
+   "ell_rms_x15_45_um": 79.43477247711036,
+   "ell_rms_x5_45_um": 89.94195244393312,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 50.375,
+   "r2_peak_localpeak_x10_45": 0.5414362804422872,
+   "r2_peak_x10_45": 0.0015091963213333948,
+   "r2_peak_x10_50": 0.003002818780081684,
+   "r2_peak_x15_45": 0.0013244289602107884,
+   "r2_peak_x5_45": 0.001672089576429503,
+   "r2_rms_localpeak_x10_45": 0.5656051458251349,
+   "r2_rms_x10_45": 0.003963563231425216,
+   "r2_rms_x10_50": 0.008099354383051982,
+   "r2_rms_x15_45": 0.0033275665775556185,
+   "r2_rms_x5_45": 0.004568619971928589,
+   "t_first_ns": 0.3138301162072615,
+   "t_last_ns": 280.4565757235021,
+   "wavefront_r2": 5.376010089774841e-05,
+   "wavefront_slope_um_per_s": 3315266.4807445724
+  },
+  "seconds": 35.4,
+  "snapshots": 400
+ },
+ "YIG_a1e-3_5G": {
+  "bad_files": [],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "140000",
+   "alpha": "0.001",
+   "f0_Hz": 5000000000.0
+  },
+  "metrics": {},
+  "seconds": 0.0,
+  "snapshots": 0
+ },
+ "YIG_a1e-4_2G": {
+  "archive_MB": 14.41,
+  "bad_files": [],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(20e-3, 0, 0)",
+   "Msat": "140000",
+   "alpha": "0.0001",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {
+   "antinode_x_um": 14.375,
+   "contrast_peak_to_valley": 0.9954210519790649,
+   "dt_snapshot_ns": 0.5703596570904839,
+   "ell_peak_localpeak_x10_45_um": Infinity,
+   "ell_peak_x10_45_um": 258.10185732902227,
+   "ell_peak_x10_50_um": 209.86868672150743,
+   "ell_peak_x15_45_um": 227.68195730582795,
+   "ell_peak_x5_45_um": 299.4471531189958,
+   "ell_rms_localpeak_x10_45_um": 61.22845109702772,
+   "ell_rms_x10_45_um": 148.62238844703884,
+   "ell_rms_x10_50_um": 120.9942522960631,
+   "ell_rms_x15_45_um": 132.11387465219872,
+   "ell_rms_x5_45_um": 170.6526218236518,
+   "n_peak_x10_45": 700,
+   "n_peak_x10_50": 800,
+   "n_peak_x15_45": 600,
+   "n_peak_x5_45": 800,
+   "n_rms_x10_45": 700,
+   "n_rms_x10_50": 800,
+   "n_rms_x15_45": 600,
+   "n_rms_x5_45": 800,
+   "node_x_um": 45.975,
+   "r2_peak_localpeak_x10_45": 0.5250850637869464,
+   "r2_peak_x10_45": 0.0005615158803040643,
+   "r2_peak_x10_50": 0.0011187325668716719,
+   "r2_peak_x15_45": 0.0005288844339482734,
+   "r2_peak_x5_45": 0.0005468377421441462,
+   "r2_rms_localpeak_x10_45": 0.570011594036125,
+   "r2_rms_x10_45": 0.0018331115502875361,
+   "r2_rms_x10_50": 0.0037578289411801524,
+   "r2_rms_x15_45": 0.0017256231036766323,
+   "r2_rms_x5_45": 0.0018060798515177057,
+   "t_first_ns": 0.4988283247043826,
+   "t_last_ns": 237.29712245426728,
+   "wavefront_r2": 0.012086087100050658,
+   "wavefront_slope_um_per_s": -59482587.661906086
+  },
+  "seconds": 41.4,
+  "snapshots": 400
+ },
+ "YIG_pma_2G": {
+  "bad_files": [
+   [
+    "m_y000000.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000000.ovf: no OVF data section"
+   ],
+   [
+    "m_y000001.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000001.ovf: no OVF data section"
+   ],
+   [
+    "m_y000002.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000002.ovf: no OVF data section"
+   ],
+   [
+    "m_y000003.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000003.ovf: no OVF data section"
+   ],
+   [
+    "m_y000004.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000004.ovf: no OVF data section"
+   ],
+   [
+    "m_y000005.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000005.ovf: no OVF data section"
+   ],
+   [
+    "m_y000006.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000006.ovf: no OVF data section"
+   ],
+   [
+    "m_y000007.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000007.ovf: no OVF data section"
+   ],
+   [
+    "m_y000008.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000008.ovf: no OVF data section"
+   ],
+   [
+    "m_y000009.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000009.ovf: no OVF data section"
+   ],
+   [
+    "m_y000010.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000010.ovf: no OVF data section"
+   ],
+   [
+    "m_y000011.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000011.ovf: no OVF data section"
+   ],
+   [
+    "m_y000012.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000012.ovf: no OVF data section"
+   ],
+   [
+    "m_y000013.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000013.ovf: no OVF data section"
+   ],
+   [
+    "m_y000014.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000014.ovf: no OVF data section"
+   ],
+   [
+    "m_y000015.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000015.ovf: no OVF data section"
+   ],
+   [
+    "m_y000016.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000016.ovf: no OVF data section"
+   ],
+   [
+    "m_y000017.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000017.ovf: no OVF data section"
+   ],
+   [
+    "m_y000018.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000018.ovf: no OVF data section"
+   ],
+   [
+    "m_y000019.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000019.ovf: no OVF data section"
+   ],
+   [
+    "m_y000020.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000020.ovf: no OVF data section"
+   ],
+   [
+    "m_y000021.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000021.ovf: no OVF data section"
+   ],
+   [
+    "m_y000022.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000022.ovf: no OVF data section"
+   ],
+   [
+    "m_y000023.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000023.ovf: no OVF data section"
+   ],
+   [
+    "m_y000024.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000024.ovf: no OVF data section"
+   ],
+   [
+    "m_y000025.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000025.ovf: no OVF data section"
+   ],
+   [
+    "m_y000026.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000026.ovf: no OVF data section"
+   ],
+   [
+    "m_y000027.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000027.ovf: no OVF data section"
+   ],
+   [
+    "m_y000028.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000028.ovf: no OVF data section"
+   ],
+   [
+    "m_y000029.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000029.ovf: no OVF data section"
+   ],
+   [
+    "m_y000030.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000030.ovf: no OVF data section"
+   ],
+   [
+    "m_y000031.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000031.ovf: no OVF data section"
+   ],
+   [
+    "m_y000032.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000032.ovf: no OVF data section"
+   ],
+   [
+    "m_y000033.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000033.ovf: no OVF data section"
+   ],
+   [
+    "m_y000034.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000034.ovf: no OVF data section"
+   ],
+   [
+    "m_y000035.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000035.ovf: no OVF data section"
+   ],
+   [
+    "m_y000036.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000036.ovf: no OVF data section"
+   ],
+   [
+    "m_y000037.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000037.ovf: no OVF data section"
+   ],
+   [
+    "m_y000038.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000038.ovf: no OVF data section"
+   ],
+   [
+    "m_y000039.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000039.ovf: no OVF data section"
+   ],
+   [
+    "m_y000040.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000040.ovf: no OVF data section"
+   ],
+   [
+    "m_y000041.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000041.ovf: no OVF data section"
+   ],
+   [
+    "m_y000042.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000042.ovf: no OVF data section"
+   ],
+   [
+    "m_y000043.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000043.ovf: no OVF data section"
+   ],
+   [
+    "m_y000044.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000044.ovf: no OVF data section"
+   ],
+   [
+    "m_y000045.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000045.ovf: no OVF data section"
+   ],
+   [
+    "m_y000046.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000046.ovf: no OVF data section"
+   ],
+   [
+    "m_y000047.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000047.ovf: no OVF data section"
+   ],
+   [
+    "m_y000048.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000048.ovf: no OVF data section"
+   ],
+   [
+    "m_y000049.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000049.ovf: no OVF data section"
+   ],
+   [
+    "m_y000050.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000050.ovf: no OVF data section"
+   ],
+   [
+    "m_y000051.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000051.ovf: no OVF data section"
+   ],
+   [
+    "m_y000052.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000052.ovf: no OVF data section"
+   ],
+   [
+    "m_y000053.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000053.ovf: no OVF data section"
+   ],
+   [
+    "m_y000054.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000054.ovf: no OVF data section"
+   ],
+   [
+    "m_y000055.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000055.ovf: no OVF data section"
+   ],
+   [
+    "m_y000056.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000056.ovf: no OVF data section"
+   ],
+   [
+    "m_y000057.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000057.ovf: no OVF data section"
+   ],
+   [
+    "m_y000058.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000058.ovf: no OVF data section"
+   ],
+   [
+    "m_y000059.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000059.ovf: no OVF data section"
+   ],
+   [
+    "m_y000060.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000060.ovf: no OVF data section"
+   ],
+   [
+    "m_y000061.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000061.ovf: no OVF data section"
+   ],
+   [
+    "m_y000062.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000062.ovf: no OVF data section"
+   ],
+   [
+    "m_y000063.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000063.ovf: no OVF data section"
+   ],
+   [
+    "m_y000064.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000064.ovf: no OVF data section"
+   ],
+   [
+    "m_y000065.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000065.ovf: no OVF data section"
+   ],
+   [
+    "m_y000066.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000066.ovf: no OVF data section"
+   ],
+   [
+    "m_y000067.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000067.ovf: no OVF data section"
+   ],
+   [
+    "m_y000068.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000068.ovf: no OVF data section"
+   ],
+   [
+    "m_y000069.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000069.ovf: no OVF data section"
+   ],
+   [
+    "m_y000070.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000070.ovf: no OVF data section"
+   ],
+   [
+    "m_y000071.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000071.ovf: no OVF data section"
+   ],
+   [
+    "m_y000072.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000072.ovf: no OVF data section"
+   ],
+   [
+    "m_y000073.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000073.ovf: no OVF data section"
+   ],
+   [
+    "m_y000074.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000074.ovf: no OVF data section"
+   ],
+   [
+    "m_y000075.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000075.ovf: no OVF data section"
+   ],
+   [
+    "m_y000076.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000076.ovf: no OVF data section"
+   ],
+   [
+    "m_y000077.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000077.ovf: no OVF data section"
+   ],
+   [
+    "m_y000078.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000078.ovf: no OVF data section"
+   ],
+   [
+    "m_y000079.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000079.ovf: no OVF data section"
+   ],
+   [
+    "m_y000080.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000080.ovf: no OVF data section"
+   ],
+   [
+    "m_y000081.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000081.ovf: no OVF data section"
+   ],
+   [
+    "m_y000082.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000082.ovf: no OVF data section"
+   ],
+   [
+    "m_y000083.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000083.ovf: no OVF data section"
+   ],
+   [
+    "m_y000084.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000084.ovf: no OVF data section"
+   ],
+   [
+    "m_y000085.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000085.ovf: no OVF data section"
+   ],
+   [
+    "m_y000086.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000086.ovf: no OVF data section"
+   ],
+   [
+    "m_y000087.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000087.ovf: no OVF data section"
+   ],
+   [
+    "m_y000088.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000088.ovf: no OVF data section"
+   ],
+   [
+    "m_y000089.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000089.ovf: no OVF data section"
+   ],
+   [
+    "m_y000090.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000090.ovf: no OVF data section"
+   ],
+   [
+    "m_y000091.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000091.ovf: no OVF data section"
+   ],
+   [
+    "m_y000092.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000092.ovf: no OVF data section"
+   ],
+   [
+    "m_y000093.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000093.ovf: no OVF data section"
+   ],
+   [
+    "m_y000094.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000094.ovf: no OVF data section"
+   ],
+   [
+    "m_y000095.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000095.ovf: no OVF data section"
+   ],
+   [
+    "m_y000096.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000096.ovf: no OVF data section"
+   ],
+   [
+    "m_y000097.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000097.ovf: no OVF data section"
+   ],
+   [
+    "m_y000098.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000098.ovf: no OVF data section"
+   ],
+   [
+    "m_y000099.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000099.ovf: no OVF data section"
+   ],
+   [
+    "m_y000100.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000100.ovf: no OVF data section"
+   ],
+   [
+    "m_y000101.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000101.ovf: no OVF data section"
+   ],
+   [
+    "m_y000102.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000102.ovf: no OVF data section"
+   ],
+   [
+    "m_y000103.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000103.ovf: no OVF data section"
+   ],
+   [
+    "m_y000104.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000104.ovf: no OVF data section"
+   ],
+   [
+    "m_y000105.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000105.ovf: no OVF data section"
+   ],
+   [
+    "m_y000106.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000106.ovf: no OVF data section"
+   ],
+   [
+    "m_y000107.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000107.ovf: no OVF data section"
+   ],
+   [
+    "m_y000108.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000108.ovf: no OVF data section"
+   ],
+   [
+    "m_y000109.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000109.ovf: no OVF data section"
+   ],
+   [
+    "m_y000110.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000110.ovf: no OVF data section"
+   ],
+   [
+    "m_y000111.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000111.ovf: no OVF data section"
+   ],
+   [
+    "m_y000112.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000112.ovf: no OVF data section"
+   ],
+   [
+    "m_y000113.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000113.ovf: no OVF data section"
+   ],
+   [
+    "m_y000114.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000114.ovf: no OVF data section"
+   ],
+   [
+    "m_y000115.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000115.ovf: no OVF data section"
+   ],
+   [
+    "m_y000116.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000116.ovf: no OVF data section"
+   ],
+   [
+    "m_y000117.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000117.ovf: no OVF data section"
+   ],
+   [
+    "m_y000118.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000118.ovf: no OVF data section"
+   ],
+   [
+    "m_y000119.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000119.ovf: no OVF data section"
+   ],
+   [
+    "m_y000120.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000120.ovf: no OVF data section"
+   ],
+   [
+    "m_y000121.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000121.ovf: no OVF data section"
+   ],
+   [
+    "m_y000122.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000122.ovf: no OVF data section"
+   ],
+   [
+    "m_y000123.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000123.ovf: no OVF data section"
+   ],
+   [
+    "m_y000124.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000124.ovf: no OVF data section"
+   ],
+   [
+    "m_y000125.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000125.ovf: no OVF data section"
+   ],
+   [
+    "m_y000126.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000126.ovf: no OVF data section"
+   ],
+   [
+    "m_y000127.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000127.ovf: no OVF data section"
+   ],
+   [
+    "m_y000128.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000128.ovf: no OVF data section"
+   ],
+   [
+    "m_y000129.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000129.ovf: no OVF data section"
+   ],
+   [
+    "m_y000130.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000130.ovf: no OVF data section"
+   ],
+   [
+    "m_y000131.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000131.ovf: no OVF data section"
+   ],
+   [
+    "m_y000132.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000132.ovf: no OVF data section"
+   ],
+   [
+    "m_y000133.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000133.ovf: no OVF data section"
+   ],
+   [
+    "m_y000134.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000134.ovf: no OVF data section"
+   ],
+   [
+    "m_y000135.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000135.ovf: no OVF data section"
+   ],
+   [
+    "m_y000136.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000136.ovf: no OVF data section"
+   ],
+   [
+    "m_y000137.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000137.ovf: no OVF data section"
+   ],
+   [
+    "m_y000138.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000138.ovf: no OVF data section"
+   ],
+   [
+    "m_y000139.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000139.ovf: no OVF data section"
+   ],
+   [
+    "m_y000140.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000140.ovf: no OVF data section"
+   ],
+   [
+    "m_y000141.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000141.ovf: no OVF data section"
+   ],
+   [
+    "m_y000142.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000142.ovf: no OVF data section"
+   ],
+   [
+    "m_y000143.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000143.ovf: no OVF data section"
+   ],
+   [
+    "m_y000144.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000144.ovf: no OVF data section"
+   ],
+   [
+    "m_y000145.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000145.ovf: no OVF data section"
+   ],
+   [
+    "m_y000146.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000146.ovf: no OVF data section"
+   ],
+   [
+    "m_y000147.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000147.ovf: no OVF data section"
+   ],
+   [
+    "m_y000148.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000148.ovf: no OVF data section"
+   ],
+   [
+    "m_y000149.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000149.ovf: no OVF data section"
+   ],
+   [
+    "m_y000150.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000150.ovf: no OVF data section"
+   ],
+   [
+    "m_y000151.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000151.ovf: no OVF data section"
+   ],
+   [
+    "m_y000152.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000152.ovf: no OVF data section"
+   ],
+   [
+    "m_y000153.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000153.ovf: no OVF data section"
+   ],
+   [
+    "m_y000154.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000154.ovf: no OVF data section"
+   ],
+   [
+    "m_y000155.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000155.ovf: no OVF data section"
+   ],
+   [
+    "m_y000156.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000156.ovf: no OVF data section"
+   ],
+   [
+    "m_y000157.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000157.ovf: no OVF data section"
+   ],
+   [
+    "m_y000158.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000158.ovf: no OVF data section"
+   ],
+   [
+    "m_y000159.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000159.ovf: no OVF data section"
+   ],
+   [
+    "m_y000160.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000160.ovf: no OVF data section"
+   ],
+   [
+    "m_y000161.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000161.ovf: no OVF data section"
+   ],
+   [
+    "m_y000162.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000162.ovf: no OVF data section"
+   ],
+   [
+    "m_y000163.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000163.ovf: no OVF data section"
+   ],
+   [
+    "m_y000164.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000164.ovf: no OVF data section"
+   ],
+   [
+    "m_y000165.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000165.ovf: no OVF data section"
+   ],
+   [
+    "m_y000166.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000166.ovf: no OVF data section"
+   ],
+   [
+    "m_y000167.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000167.ovf: no OVF data section"
+   ],
+   [
+    "m_y000168.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000168.ovf: no OVF data section"
+   ],
+   [
+    "m_y000169.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000169.ovf: no OVF data section"
+   ],
+   [
+    "m_y000170.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000170.ovf: no OVF data section"
+   ],
+   [
+    "m_y000171.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000171.ovf: no OVF data section"
+   ],
+   [
+    "m_y000172.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000172.ovf: no OVF data section"
+   ],
+   [
+    "m_y000173.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000173.ovf: no OVF data section"
+   ],
+   [
+    "m_y000174.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000174.ovf: no OVF data section"
+   ],
+   [
+    "m_y000175.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000175.ovf: no OVF data section"
+   ],
+   [
+    "m_y000176.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000176.ovf: no OVF data section"
+   ],
+   [
+    "m_y000177.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000177.ovf: no OVF data section"
+   ],
+   [
+    "m_y000178.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000178.ovf: no OVF data section"
+   ],
+   [
+    "m_y000179.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000179.ovf: no OVF data section"
+   ],
+   [
+    "m_y000180.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000180.ovf: no OVF data section"
+   ],
+   [
+    "m_y000181.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000181.ovf: no OVF data section"
+   ],
+   [
+    "m_y000182.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000182.ovf: no OVF data section"
+   ],
+   [
+    "m_y000183.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000183.ovf: no OVF data section"
+   ],
+   [
+    "m_y000184.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000184.ovf: no OVF data section"
+   ],
+   [
+    "m_y000185.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000185.ovf: no OVF data section"
+   ],
+   [
+    "m_y000186.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000186.ovf: no OVF data section"
+   ],
+   [
+    "m_y000187.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000187.ovf: no OVF data section"
+   ],
+   [
+    "m_y000188.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000188.ovf: no OVF data section"
+   ],
+   [
+    "m_y000189.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000189.ovf: no OVF data section"
+   ],
+   [
+    "m_y000190.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000190.ovf: no OVF data section"
+   ],
+   [
+    "m_y000191.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000191.ovf: no OVF data section"
+   ],
+   [
+    "m_y000192.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000192.ovf: no OVF data section"
+   ],
+   [
+    "m_y000193.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000193.ovf: no OVF data section"
+   ],
+   [
+    "m_y000194.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000194.ovf: no OVF data section"
+   ],
+   [
+    "m_y000195.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000195.ovf: no OVF data section"
+   ],
+   [
+    "m_y000196.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000196.ovf: no OVF data section"
+   ],
+   [
+    "m_y000197.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000197.ovf: no OVF data section"
+   ],
+   [
+    "m_y000198.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000198.ovf: no OVF data section"
+   ],
+   [
+    "m_y000199.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000199.ovf: no OVF data section"
+   ],
+   [
+    "m_y000200.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000200.ovf: no OVF data section"
+   ],
+   [
+    "m_y000201.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000201.ovf: no OVF data section"
+   ],
+   [
+    "m_y000202.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000202.ovf: no OVF data section"
+   ],
+   [
+    "m_y000203.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000203.ovf: no OVF data section"
+   ],
+   [
+    "m_y000204.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000204.ovf: no OVF data section"
+   ],
+   [
+    "m_y000205.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000205.ovf: no OVF data section"
+   ],
+   [
+    "m_y000206.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000206.ovf: no OVF data section"
+   ],
+   [
+    "m_y000207.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000207.ovf: no OVF data section"
+   ],
+   [
+    "m_y000208.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000208.ovf: no OVF data section"
+   ],
+   [
+    "m_y000209.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000209.ovf: no OVF data section"
+   ],
+   [
+    "m_y000210.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000210.ovf: no OVF data section"
+   ],
+   [
+    "m_y000211.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000211.ovf: no OVF data section"
+   ],
+   [
+    "m_y000212.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000212.ovf: no OVF data section"
+   ],
+   [
+    "m_y000213.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000213.ovf: no OVF data section"
+   ],
+   [
+    "m_y000214.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000214.ovf: no OVF data section"
+   ],
+   [
+    "m_y000215.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000215.ovf: no OVF data section"
+   ],
+   [
+    "m_y000216.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000216.ovf: no OVF data section"
+   ],
+   [
+    "m_y000217.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000217.ovf: no OVF data section"
+   ],
+   [
+    "m_y000218.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000218.ovf: no OVF data section"
+   ],
+   [
+    "m_y000219.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000219.ovf: no OVF data section"
+   ],
+   [
+    "m_y000220.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000220.ovf: no OVF data section"
+   ],
+   [
+    "m_y000221.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000221.ovf: no OVF data section"
+   ],
+   [
+    "m_y000222.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000222.ovf: no OVF data section"
+   ],
+   [
+    "m_y000223.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000223.ovf: no OVF data section"
+   ],
+   [
+    "m_y000224.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000224.ovf: no OVF data section"
+   ],
+   [
+    "m_y000225.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000225.ovf: no OVF data section"
+   ],
+   [
+    "m_y000226.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000226.ovf: no OVF data section"
+   ],
+   [
+    "m_y000227.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000227.ovf: no OVF data section"
+   ],
+   [
+    "m_y000228.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000228.ovf: no OVF data section"
+   ],
+   [
+    "m_y000229.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000229.ovf: no OVF data section"
+   ],
+   [
+    "m_y000230.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000230.ovf: no OVF data section"
+   ],
+   [
+    "m_y000231.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000231.ovf: no OVF data section"
+   ],
+   [
+    "m_y000232.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000232.ovf: no OVF data section"
+   ],
+   [
+    "m_y000233.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000233.ovf: no OVF data section"
+   ],
+   [
+    "m_y000234.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000234.ovf: no OVF data section"
+   ],
+   [
+    "m_y000235.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000235.ovf: no OVF data section"
+   ],
+   [
+    "m_y000236.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000236.ovf: no OVF data section"
+   ],
+   [
+    "m_y000237.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000237.ovf: no OVF data section"
+   ],
+   [
+    "m_y000238.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000238.ovf: no OVF data section"
+   ],
+   [
+    "m_y000239.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000239.ovf: no OVF data section"
+   ],
+   [
+    "m_y000240.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000240.ovf: no OVF data section"
+   ],
+   [
+    "m_y000241.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000241.ovf: no OVF data section"
+   ],
+   [
+    "m_y000242.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000242.ovf: no OVF data section"
+   ],
+   [
+    "m_y000243.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000243.ovf: no OVF data section"
+   ],
+   [
+    "m_y000244.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000244.ovf: no OVF data section"
+   ],
+   [
+    "m_y000245.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000245.ovf: no OVF data section"
+   ],
+   [
+    "m_y000246.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000246.ovf: no OVF data section"
+   ],
+   [
+    "m_y000247.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000247.ovf: no OVF data section"
+   ],
+   [
+    "m_y000248.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000248.ovf: no OVF data section"
+   ],
+   [
+    "m_y000249.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000249.ovf: no OVF data section"
+   ],
+   [
+    "m_y000250.ovf",
+    "/root/mumax/YIG_pma_2G.out/m_y000250.ovf: no OVF data section"
+   ]
+  ],
+  "deck": {
+   "Aex": "5e-12",
+   "B_ext": "vector(0, 0, 20e-3)",
+   "Msat": "140000",
+   "alpha": "0.001",
+   "f0_Hz": 2000000000.0
+  },
+  "metrics": {},
+  "seconds": 0.5,
+  "snapshots": 0
+ }
+}

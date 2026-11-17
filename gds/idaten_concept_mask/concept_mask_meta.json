@@ -1,0 +1,73 @@
+{
+  "file": "idaten_concept_mask.gds",
+  "label": "CONCEPT MASK - no PDK exists for hematite/LiNbO3 patterning",
+  "not_a_manufacturable_mask_set": true,
+  "die_um": [
+    5000.0,
+    5000.0
+  ],
+  "grid_um": 5.0,
+  "unit_m": 1e-06,
+  "precision_m": 1e-09,
+  "bus_width_um": 2.0,
+  "array_pitch_um": 0.2,
+  "array_elements": 13000,
+  "pinning_sites": 10400,
+  "cell_nm": [
+    100,
+    20
+  ],
+  "cpw_centre_um": 2.1,
+  "layers": {
+    "10": {
+      "datatype": 0,
+      "purpose": "MG_WG",
+      "assumption": "YIG or hematite bus waveguide core"
+    },
+    "11": {
+      "datatype": 0,
+      "purpose": "MG_PHASE",
+      "assumption": "phase shifter / tuning region"
+    },
+    "12": {
+      "datatype": 0,
+      "purpose": "MG_NL",
+      "assumption": "non-linear pinning-site array (the weight landscape)"
+    },
+    "13": {
+      "datatype": 0,
+      "purpose": "MG_SOT",
+      "assumption": "spin-orbit / spin-torque transducer"
+    },
+    "14": {
+      "datatype": 0,
+      "purpose": "MG_MTJ",
+      "assumption": "switchable nanomagnet cell (the M_k write target)"
+    },
+    "15": {
+      "datatype": 0,
+      "purpose": "MG_RAIL",
+      "assumption": "configuration rail (C_k distribution)"
+    },
+    "20": {
+      "datatype": 0,
+      "purpose": "CPW",
+      "assumption": "coplanar waveguide, launch and detect"
+    },
+    "30": {
+      "datatype": 0,
+      "purpose": "ALIGN",
+      "assumption": "optical alignment marks"
+    },
+    "40": {
+      "datatype": 0,
+      "purpose": "DIE",
+      "assumption": "die outline / scribe"
+    },
+    "50": {
+      "datatype": 0,
+      "purpose": "LABEL",
+      "assumption": "non-fab annotation"
+    }
+  }
+}

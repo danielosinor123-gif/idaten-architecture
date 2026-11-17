@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Large derived data (regenerate with tools/archive_lab2.py)
+data/lab_archive/full/
+data/lab_archive/*.npz
+data/lab/_summary_raw.json
+data/lab/*.npz
+data/lab/decks/
+
+# Open-flow run products (logs, intermediate DEF/LEF are large; final GDS is kept)
+openflow/runs/*/
+openflow/**/*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
