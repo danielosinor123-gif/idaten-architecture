@@ -1,0 +1,248 @@
+{
+  "table_rows": 2401,
+  "t_span_ns": 12.0,
+  "dt_median_ps": 4.982576896515569,
+  "global_mz_start": -0.99995905,
+  "global_mz_end": -0.999957,
+  "fft_mx_peaks_GHz": [
+    1.3325,
+    1.4435,
+    1.5546,
+    1.7767,
+    1.8877,
+    1.9987,
+    2.1098,
+    2.2208
+  ],
+  "fft_my_peaks_GHz": [
+    1.3325,
+    1.4435,
+    1.5546,
+    1.7767,
+    1.8877,
+    1.9987,
+    2.1098,
+    2.2208
+  ],
+  "published_anchors_L": {
+    "k1_GHz": 1.7,
+    "MAMR_dips_GHz": [
+      9.25,
+      10.75,
+      11.75
+    ],
+    "drive_band_edge_GHz": 20.0
+  },
+  "visible_magnets": 26,
+  "switched_magnets": 0,
+  "magnets": [
+    {
+      "i": 25,
+      "x_center_nm": -0.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99997,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 26,
+      "x_center_nm": 200.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 27,
+      "x_center_nm": 400.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 28,
+      "x_center_nm": 600.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99996,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 29,
+      "x_center_nm": 800.0,
+      "mz_start": -0.99996,
+      "mz_finish": -0.99996,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 30,
+      "x_center_nm": 1000.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 31,
+      "x_center_nm": 1200.0,
+      "mz_start": -0.99996,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 32,
+      "x_center_nm": 1400.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 33,
+      "x_center_nm": 1600.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 34,
+      "x_center_nm": 1800.0,
+      "mz_start": -0.99996,
+      "mz_finish": -0.99995,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 35,
+      "x_center_nm": 2000.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99996,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 36,
+      "x_center_nm": 2200.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 37,
+      "x_center_nm": 2400.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 38,
+      "x_center_nm": 2600.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99997,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 39,
+      "x_center_nm": 2800.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 40,
+      "x_center_nm": 3000.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 41,
+      "x_center_nm": 3200.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99996,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 42,
+      "x_center_nm": 3400.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 43,
+      "x_center_nm": 3600.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99994,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 44,
+      "x_center_nm": 3800.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99997,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 45,
+      "x_center_nm": 4000.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": -0.0,
+      "switched": false
+    },
+    {
+      "i": 46,
+      "x_center_nm": 4200.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99994,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 47,
+      "x_center_nm": 4400.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99996,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 48,
+      "x_center_nm": 4600.0,
+      "mz_start": -0.99997,
+      "mz_finish": -0.99996,
+      "dmz": 0.0,
+      "switched": false
+    },
+    {
+      "i": 49,
+      "x_center_nm": 4800.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99994,
+      "dmz": 1e-05,
+      "switched": false
+    },
+    {
+      "i": 50,
+      "x_center_nm": 5000.0,
+      "mz_start": -0.99995,
+      "mz_finish": -0.99995,
+      "dmz": 0.0,
+      "switched": false
+    }
+  ]
+}
