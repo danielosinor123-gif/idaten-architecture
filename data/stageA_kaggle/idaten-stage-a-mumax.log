@@ -1,0 +1,68 @@
+[{"stream_name":"stdout","time":1.079308225,"data":"[20:44:51] environment:\n"}
+,{"stream_name":"stdout","time":1.115755658,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":1.115775768,"data":"Tesla T4, 15360 MiB\n"}
+,{"stream_name":"stdout","time":1.122507818,"data":"[20:44:51] assets dir: /kaggle/input/datasets/danielvking/idaten-stagea-assets\n"}
+,{"stream_name":"stdout","time":7.547715236,"data":"[20:44:57] fresh mode: full minimize()/relax() init (as published)\n"}
+,{"stream_name":"stdout","time":7.547921299,"data":"[20:44:57] launching mumax3 (12 ns driven run) ...\n"}
+,{"stream_name":"stdout","time":7.548429832,"data":"[20:44:57] running 0.0 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":37.550780319,"data":"[20:45:27] running 0.5 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":67.553031744,"data":"[20:45:57] running 1.0 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":97.554250023,"data":"[20:46:27] running 1.5 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":127.556340776,"data":"[20:46:57] running 2.0 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":157.558384745,"data":"[20:47:27] running 2.5 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":187.560404178,"data":"[20:47:57] running 3.0 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":217.562350021,"data":"[20:48:27] running 3.5 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":247.564037239,"data":"[20:48:57] running 4.0 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":277.56604263,"data":"[20:49:27] running 4.5 min | no table rows yet (init/geometry phase)\n"}
+,{"stream_name":"stdout","time":307.5693679,"data":"[20:49:57] backed up mStart.ovf (7585886 bytes)\n"}
+,{"stream_name":"stdout","time":307.569462479,"data":"[20:49:57] running 4.7 min | sim 1.305 ns / 12 ns (10.9%)\n"}
+,{"stream_name":"stdout","time":337.571597611,"data":"[20:50:27] running 5.5 min | sim 3.180 ns / 12 ns (26.5%)\n"}
+,{"stream_name":"stdout","time":367.573493723,"data":"[20:50:57] running 6.0 min | sim 5.025 ns / 12 ns (41.9%)\n"}
+,{"stream_name":"stdout","time":397.575452038,"data":"[20:51:27] running 6.5 min | sim 6.890 ns / 12 ns (57.4%)\n"}
+,{"stream_name":"stdout","time":427.57732506,"data":"[20:51:57] running 7.0 min | sim 8.745 ns / 12 ns (72.9%)\n"}
+,{"stream_name":"stdout","time":457.579156752,"data":"[20:52:27] running 7.5 min | sim 10.595 ns / 12 ns (88.3%)\n"}
+,{"stream_name":"stdout","time":497.583261112,"data":"[20:53:07] backed up Finish.ovf (7306091 bytes)\n"}
+,{"stream_name":"stdout","time":497.584230557,"data":"[20:53:07] running 7.8 min | sim 12.000 ns / 12 ns (100.0%)\n"}
+,{"stream_name":"stdout","time":497.584260002,"data":"[20:53:07] mumax exited rc=0\n"}
+,{"stream_name":"stdout","time":497.58426426,"data":"[20:53:07] --- runlog tail ---\n"}
+,{"stream_name":"stdout","time":497.584267392,"data":"B_ext = vector(0.01*Bn, 0.01*Bn, Bn)\n"}
+,{"stream_name":"stdout","time":497.584270359,"data":"MaxErr = 0.5e-7\n"}
+,{"stream_name":"stdout","time":497.584273329,"data":"minimize()\n"}
+,{"stream_name":"stdout","time":497.584276201,"data":"relax()\n"}
+,{"stream_name":"stdout","time":497.584279118,"data":"saveas(m, \"mStart.ovf\")\n"}
+,{"stream_name":"stdout","time":497.584294817,"data":"saveas(B_ext, \"Bstart.ovf\")\n"}
+,{"stream_name":"stdout","time":497.584299813,"data":"saveas(m_full, \"Mfull_start\")\n"}
+,{"stream_name":"stdout","time":497.584305031,"data":"save(B_eff)\n"}
+,{"stream_name":"stdout","time":497.584323925,"data":"mx := m.Comp(0)\n"}
+,{"stream_name":"stdout","time":497.584327813,"data":"mx_center := CropY(mx, 0, 25)\n"}
+,{"stream_name":"stdout","time":497.584331125,"data":"mx_center_line := CropY(mx, 10, 11)\n"}
+,{"stream_name":"stdout","time":497.584334458,"data":"driv := 0.001 / 25.\n"}
+,{"stream_name":"stdout","time":497.584337827,"data":"f := 1.0e9\n"}
+,{"stream_name":"stdout","time":497.584342607,"data":"fdel := 20. * f * 2. * pi\n"}
+,{"stream_name":"stdout","time":497.58434911,"data":"toff := 3. / f\n"}
+,{"stream_name":"stdout","time":497.584351365,"data":"time := 12e-9\n"}
+,{"stream_name":"stdout","time":497.584353641,"data":"B_ext.Add(LoadFile(\"CPW32_40um.ovf\"), driv*sin((t-toff)*fdel)/((t-toff)*fdel))\n"}
+,{"stream_name":"stdout","time":497.584356103,"data":"B_ext_Line := Crop(B_ext, 0, 8192, 0, 1, 0, 1)\n"}
+,{"stream_name":"stdout","time":497.58435845,"data":"autosave(B_ext_Line, 50e-12)\n"}
+,{"stream_name":"stdout","time":497.584360693,"data":"autosave(mx_center, 50e-12)\n"}
+,{"stream_name":"stdout","time":497.584362918,"data":"autosave(mx_center_line, 5e-12)\n"}
+,{"stream_name":"stdout","time":497.584365172,"data":"tableautosave(5e-12)\n"}
+,{"stream_name":"stdout","time":497.584367733,"data":"run(time)\n"}
+,{"stream_name":"stdout","time":497.584369918,"data":"saveas(m, \"Finish.ovf\")\n"}
+,{"stream_name":"stdout","time":497.584372215,"data":"//********************************************************************//\n"}
+,{"stream_name":"stdout","time":497.584374597,"data":"//Please cite the following references, relevant for your simulation. //\n"}
+,{"stream_name":"stdout","time":497.584376986,"data":"//See bibtex file in output folder for justification.                 //\n"}
+,{"stream_name":"stdout","time":497.584379834,"data":"//********************************************************************//\n"}
+,{"stream_name":"stdout","time":497.584394705,"data":"//   * Vansteenkiste et al., AIP Adv. 4, 107133 (2014).\n"}
+,{"stream_name":"stdout","time":497.584398627,"data":"//   * Exl et al., J. Appl. Phys. 115, 17D118 (2014).\n"}
+,{"stream_name":"stdout","time":497.584402708,"data":"[20:53:07] FINISH.OVF: present\n"}
+,{"stream_name":"stdout","time":497.584406015,"data":"[20:53:07] --- artifact inventory (deck.out) ---\n"}
+,{"stream_name":"stdout","time":497.607964557,"data":"[20:53:07] 2895 files, 994.3 MB total\n"}
+,{"stream_name":"stdout","time":497.607983297,"data":"[20:53:07] STAGE A RUN COMPLETE\n"}
+,{"stream_name":"stderr","time":499.850639718,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":499.850665864,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":500.120237979,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":500.120263037,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":501.694991024,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":502.684309159,"data":"[NbConvertApp] Writing 320878 bytes to __results__.html\n"}
+]

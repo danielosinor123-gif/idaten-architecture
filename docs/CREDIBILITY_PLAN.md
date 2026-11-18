@@ -96,14 +96,15 @@ mumax³ deck:
 | Cells on that bus at `a` = 200 nm | **205** | (E) 40960 nm / 200 nm |
 | Power into precession, k₁ mode | **36 nW** | (L) published |
 | Microwave drive power at the CPW | **P_C1 = 12.6 µW**, P_C2 = 58.4 µW | (L) published |
-| **Energy per wave event, precession term only** | **117 fJ** | (E) 36 nW × 3.26 ns |
-| **Energy per wave event, drive-power term** | **41 pJ** | (E) 12.6 µW × 3.26 ns |
-| **Implied energy per written cell (drive-power term, 205 cells, 100 % correct)** | **0.20 pJ/cell** | (E) 41 pJ / 205 |
+| **Energy per wave event, precession term only** | **0.117 fJ** | (E) 36 nW × 3.26 ns = 117 aJ |
+| **Energy per wave event, drive-power term** | **41 fJ** | (E) 12.6 µW × 3.26 ns |
+| **Implied energy per written cell (drive-power term, 205 cells, 100 % correct)** | **0.20 fJ/cell** | (E) 41 fJ / 205 |
 | Comparison: SOT-MRAM write energy | **5–20 pJ/bit (assumption, to be replaced by a cited foundry figure)** | (E) pending |
 
-**Reading this honestly.** The prize looks enormous — 25–100× on the
-drive-power term — which is exactly why it must be treated as a hypothesis
-rather than a result. The calculation assumes **all** of:
+**Reading this honestly.** The naive drive-power comparison looks enormous —
+four to five orders of magnitude against a 5–20 pJ/bit foundry write — which
+is exactly why it must be treated as a hypothesis rather than a result. The
+calculation assumes **all** of:
 
 - one wave event switches **all 205** cells (no threshold spread, no error);
 - 36 nW / 12.6 µW are the **total** bus power, not per-device;

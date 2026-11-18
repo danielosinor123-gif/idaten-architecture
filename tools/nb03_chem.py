@@ -9,8 +9,9 @@ Explicitly NOT claimed:
     - that spin waves emulate Schrodinger / Kohn-Sham operators
     - that this "solves DFT"
 
-PySCF is used only to supply an INDEPENDENT ground-truth electron density for
-a separate, clearly-labelled cross-check.
+PySCF is used only as an INDEPENDENT quantum-chemistry cross-check of the
+same molecular geometry (SCF energy). It is never an input to the analogue,
+and no claim is made that the analogue density equals a DFT density.
 """
 import os
 import sys
@@ -72,8 +73,8 @@ So the claim under test is narrow and falsifiable:
   2. **Analogue wave medium** — 4f correlator whose transfer function is
      built from the **continuous** Green's function sampled on the grid, then
      propagated. *This is the thing being tested.*
-  3. **Independent ground truth** — PySCF DFT electron density of the same
-     molecule, used only as a separate cross-check in §5.
+  3. **Independent quantum chemistry** — PySCF SCF energy of the same molecular
+     geometry, used only as a separate, clearly-labelled cross-check in §6.
 """),
 
 ("code", r"""
@@ -341,26 +342,25 @@ lands outside, the architecture's error model is wrong.
 """),
 
 ("md", r"""
-## 6. Independent ground truth: PySCF, used only as a cross-check
+## 6. Independent quantum-chemistry check — not a validation of the analogue
 
-Here we take a real molecule — **H₂O** — and do two independent things:
+Here we run the same H₂O geometry through PySCF as an entirely independent
+quantum-chemistry calculation.
 
-1. **PySCF (L/S)** computes the DFT electron density on a grid in the
-   molecular plane.
-2. **The analogue** computes the *classical* electron density of the same
-   nuclear charges via the Poisson/Green's operator of §4.
+This is deliberately **not** a comparison of the analogue operator to a DFT
+density. The analogue computes a classical Green's-function / Poisson
+potential; DFT computes an electronic ground state under a different
+Hamiltonian. They are different physical objects and are not compared for
+accuracy.
 
-These are **different physical objects**. The classical Coulomb density of
-point nuclei is not the DFT density, and no claim is made that they agree to
-any particular accuracy. The point of the cross-check is narrower:
+What this section establishes, and only this:
 
-> Does the analogue machinery reproduce a **known, independently computed
-> spatial distribution** on the same grid, to within the error band already
-> established in §5?
+> the independent quantum-chemistry toolchain is reproducible in this
+> environment, on the same geometry used by the analogue example.
 
-If the analogue cannot even reproduce the classical distribution to that
-band, it certainly cannot be used to approximate a DFT density, and the
-chemistry story dies here rather than in review.
+Nothing about the analogue's accuracy is established by this section; that
+was already established against the direct sparse solve and the direct
+Coulomb sum earlier in the notebook.
 """),
 
 ("code", r"""
@@ -372,66 +372,35 @@ except Exception as e:                                     # pragma: no cover
     print("PySCF unavailable:", e)
 
 if HAVE_PYSCF:
+    # bent geometry, all atoms in the x-y plane so the analogue example
+    # below refers to the same geometry
+    r_oh = 0.957            # O-H bond length, Angstrom
+    ang = np.radians(52.25)  # half of 104.5 deg H-O-H angle
+    hx, hy = r_oh * np.sin(ang), r_oh * np.cos(ang)
+    bohr = 0.529177210903   # Ang per bohr
+    def to_bohr(p):
+        return tuple(c / bohr for c in p)
     mol = gto.M(atom=[("O", (0.0, 0.0, 0.0)),
-                      ("H", (0.0, 0.757, 0.587)),
-                      ("H", (0.0, -0.757, 0.587))],
-                basis="sto-3g", unit="Angstrom", verbose=0)
+                      ("H", to_bohr(( hx,  hy, 0.0))),
+                      ("H", to_bohr((-hx,  hy, 0.0)))],
+                basis="sto-3g", unit="Bohr", verbose=0)
     mf = scf.RHF(mol)
     mf.conv_tol = 1e-10
     mf.kernel()
     print("SCF energy (Hartree):", mf.e_tot)
-
-    # electron density on a grid in the molecular plane (z = 0.35 A)
-    ng = 64
-    ext = 3.0
-    xs = np.linspace(-ext, ext, ng)
-    X, Y = Z = np.meshgrid(xs, xs, np.zeros_like(xs), indexing="ij")
-    dens = mf.eval_rho(mol, np.stack((X.ravel(), Y.ravel(), Z.ravel()), axis=1), verbose=0)
-    dens = dens.reshape(ng, ng)
-    np.save("data_dft_density_h2o.npy", dens)
-    print("PySCF density grid:", dens.shape, "integral:", dens.sum() * (2 * ext / ng) ** 2)
+    print("This is an independent quantum-chemistry check. It is NOT an")
+    print("input to the analogue calculation, and no comparison of the analogue")
+    print("density to a DFT density is made or implied.")
 else:
-    dens = None
+    print("PySCF not installed; the analogue comparison is unaffected.")
 """),
 
-("code", r"""
-if HAVE_PYSCF:
-    # --- analogue: the SAME molecule's nuclear charges, through the Poisson operator
-    bohr = 0.529177210903e-9
-    ext_m = 3.0 * bohr
-    dx_c = 2 * ext_m / ng
-    nuclear_pos = [(0.0 * bohr, 0.0 * bohr),
-                   (0.0 * bohr, 0.757 * bohr),
-                   (0.0 * bohr, -0.757 * bohr)]
-    # effective charges seen by a classical Coulomb model of the water dipole
-    z_eff = [(-2 * 8.0), 1.0, 1.0]
-    x_c = (np.arange(ng) + 0.5) * dx_c - ext_m
-    Xc, Yc = np.meshgrid(x_c, x_c, indexing="ij")
-    dens_analogue = np.zeros((ng, ng))
-    for (px, py), q in zip(nuclear_pos, z_eff):
-        r = np.sqrt((Xc - px) ** 2 + (Yc - py) ** 2)
-        dens_analogue += q * np.exp(-r ** 2 / (2 * (1.2 * bohr) ** 2))
-    dens_analogue -= dens_analogue.mean()
-
-    d = dens - dens.mean()
-    a = dens_analogue - dens_analogue.mean()
-    cos = float((d * a).sum() / (np.linalg.norm(d) * np.linalg.norm(a) + 1e-300))
-    print(f"normalised cross-correlation (PySCF DFT vs analogue Poisson) = {cos:.4f}")
-    print(f"relative L2 difference                                        = {rel_l2(a, d):.4f}")
-    print("NOTE: a classical Coulomb density is NOT a DFT density. This number")
-    print("      is a consistency check on the analogue machinery, not a claim")
-    print("      of equivalence to DFT.")
-
-    fig, ax = plt.subplots(1, 3, figsize=(13, 4))
-    for a_, img, t in zip(ax, [d, a, np.abs(d) - np.abs(a)],
-                          ["PySCF DFT density (independent ground truth)",
-                           "analogue Poisson density (classical nuclei)",
-                           "|difference|"]):
-        im = a_.imshow(img.T, origin="lower", cmap="magma")
-        a_.set_title(t, fontsize=9); a_.set_xticks([]); a_.set_yticks([])
-        plt.colorbar(im, ax=a_, fraction=0.046)
-    fig.suptitle("H2O: independent DFT ground truth vs. the analogue operator", fontsize=10)
-    fig.tight_layout(); plt.show()
+("md", r"""
+None — no density comparison is performed in this notebook. The analogue
+potential is validated earlier, against the direct sparse solve and the
+direct Coulomb sum. PySCF is used here solely as a reproducible,
+independent quantum-chemistry signal that the environment can run a real
+molecular calculation.
 """),
 
 ("md", r"""
@@ -442,7 +411,7 @@ if HAVE_PYSCF:
 | A 4f-style wave medium implements a linear Green's-function operator to a stated accuracy | (S) | see the error surface in §5 — **not zero**, and bounded |
 | The discretisation of the operator is converged (Poisson vs Coulomb) | (S) | `eps_discrete` reported above |
 | The analogue's error is set by the phase bit-depth of the programmable landscape | (S) | error-vs-bits curve, §5 |
-| The analogue machinery reproduces an independently computed (PySCF) spatial distribution on the same grid | (S) | cross-correlation reported in §6, **partial**, and reported as such |
+| Independent quantum-chemistry SCF (PySCF) of the same geometry runs in this environment | (S) | SCF energy reported in §6 — reproducibility signal only, not a validation of the analogue |
 | Spin waves emulate Schrödinger / Kohn–Sham operators | — | **not claimed, and not true** |
 | The architecture "solves chemistry" | — | **not claimed** |
 

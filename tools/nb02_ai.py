@@ -34,6 +34,13 @@ two ways:
 The two are then compared on **accuracy** and on a **system energy ledger**
 built from stated anchors.
 
+**Dataset size.** The notebook uses a fixed random subset of MNIST (12,000
+training / 2,000 test images, `default_rng(20261116)`) so it re-runs on a
+laptop in minutes and stays within the memory limits of the CI host. The
+subset is stated in the output; nothing here is claimed to be a leaderboard
+number, and the analogue/digital gap is expected to be directionally
+independent of the subset size.
+
 **What this notebook does not claim.** It does not claim the analogue is more
 accurate. It does not claim spin waves emulate neural networks. Every energy
 number is an **(E)** engineering estimate from an anchor that is written down
@@ -94,8 +101,8 @@ print("numpy", np.__version__)
 
 MNIST (10 classes, 28x28) is the standard reference workload for small
 image-classification layers and is small enough that the whole benchmark runs
-in seconds on a laptop CPU, which matters: a reviewer must be able to re-run
-it.
+on a laptop. This notebook uses a fixed random subset (12,000 train / 2,000
+test) and says so in its output; the workload is otherwise unchanged.
 
 If the network is unavailable, the notebook falls back to
 `sklearn.datasets.load_digits` (8x8, ~1800 samples) and **says so**, rather
@@ -103,20 +110,28 @@ than silently changing the workload.
 """),
 
 ("code", r"""
+SUBSET_TRAIN = 12000
+SUBSET_TEST = 2000
+
 def load_mnist():
     try:
         import fetch_mnist
         fetch_mnist.fetch()
         xtr, ytr = fetch_mnist.load("train")
         xte, yte = fetch_mnist.load("test")
-        return xtr, ytr, xte, yte, "MNIST 28x28 (10 classes)"
     except Exception as e:
         print("MNIST unavailable:", type(e).__name__, e)
         from sklearn.datasets import load_digits
         d = load_digits()
-        n = 1400
-        return d.images[:n], d.target[:n], d.images[n:], d.target[n:], \
-               "SKLEARN digits 8x8 (FALLBACK - different workload)"
+        xtr, ytr, xte, yte = d.images[:1400], d.target[:1400], d.images[1400:], d.target[1400:]
+        print("FALLBACK: sklearn digits (8x8) — different workload")
+        return xtr, ytr, xte, yte, "SKLEARN digits 8x8 (FALLBACK - different workload)"
+
+    rng = np.random.default_rng(20261116)
+    tr = rng.permutation(len(xtr))[:SUBSET_TRAIN]
+    te = rng.permutation(len(xte))[:SUBSET_TEST]
+    return xtr[tr], ytr[tr], xte[te], yte[te], \
+           f"MNIST subset ({SUBSET_TRAIN} train / {SUBSET_TEST} test)"
 
 
 Xtr, ytr, Xte, yte, DATASET = load_mnist()
@@ -152,8 +167,6 @@ what gets written to magnetic memory.
 """),
 
 ("code", r"""
-from scipy.signal import fftconvolve
-
 K = 8          # number of filters
 F = 7          # filter size
 POOL = 2       # 2x2 average pooling after the filter bank
@@ -170,12 +183,17 @@ def build_filters(K, F, rng):
 
 
 def conv_stack_digital(X, h):
-    '''FP64 convolution bank -> (N, K, H, W).'''
-    Xf = X.astype(np.float64) / 255.0
-    out = np.empty((Xf.shape[0], h.shape[0], Xf.shape[1], Xf.shape[2]), np.float64)
-    for k in range(h.shape[0]):
-        out[:, k] = fftconvolve(Xf, h[k][None, :, :], mode="same", axes=(-2, -1))
-    return out
+    '''Perfect (quantisation-free, noise-free) 4f operator -> (N, K, H, W).
+
+    Uses exactly the same Fourier operator as the analogue path, with the
+    quantisation / noise / aperture removed. The comparison therefore isolates
+    device non-idealities, not two different implementations of convolution.
+    (An earlier edit used scipy.signal.fftconvolve on the batched arrays with a
+    mismatched leading axis; it produced uncorrelated features and a bogus
+    0.10 digital accuracy. That implementation is gone.)
+    '''
+    return conv_stack_analogue(X, h, bits=None, rel_amp_noise=0.0,
+                               rel_phase_noise=0.0, aperture=1.0)
 
 
 def phase_quantise(H, bits):
@@ -290,16 +308,23 @@ h = build_filters(K, F, np.random.default_rng(7))
 
 Zdig = conv_stack_digital(Xtr, h)
 Fdig = pool_and_flat(Zdig)
-Fdig = (Fdig - Fdig.mean(0)) / (Fdig.std(0) + 1e-9)
+# Train-split statistics captured BEFORE rebinding Fdig: applying them to the
+# test split too. (Rebinding first and re-reading Fdig.mean/std afterwards
+# used post-standardization stats ~ (0, 1), leaving the test features raw —
+# the head was scored on a differently-scaled distribution: acc 0.487/0.194
+# instead of 0.904/0.899, and deeper convergence made it worse.)
+Fmu = Fdig.mean(0)
+Fsd = Fdig.std(0) + 1e-9
+Fdig = (Fdig - Fmu) / Fsd
 
 Zte_d = conv_stack_digital(Xte, h)
 Fte_d = pool_and_flat(Zte_d)
-Fte_d = (Fte_d - Fdig.mean(0)) / (Fdig.std(0) + 1e-9)
+Fte_d = (Fte_d - Fmu) / Fsd
 
 print("digital feature dim:", Fdig.shape)
 
 t0 = time.time()
-clf = LogisticRegression(max_iter=2000)
+clf = LogisticRegression(max_iter=500, tol=1e-3)
 clf.fit(Fdig, ytr)
 acc_digital = clf.score(Fte_d, yte)
 print(f"DIGITAL baseline accuracy: {acc_digital:.4f}   ({time.time()-t0:.1f}s)")
@@ -316,7 +341,7 @@ def evaluate_analogue(bits_tr, p_tr, y_tr, bits_te, p_te, y_te, seed=0):
 
     Xtr_pm = to_pm1(bits_tr)
     Xte_pm = to_pm1(bits_te)
-    c = LogisticRegression(max_iter=2000)
+    c = LogisticRegression(max_iter=500, tol=1e-3)
     c.fit(Xtr_pm, y_tr)
     acc_clean = c.score(Xte_pm, y_te)
 
@@ -345,8 +370,8 @@ Every number below is **(E)** unless tagged otherwise. The anchors are:
 
 | Anchor | Value | Tag / source |
 |---|---|---|
-| Energy of one wave event on the precedent bus (drive-power term) | **41 pJ** | (E), derived from (L) `P_C1` = 12.6 µW and (E) 3.26 ns transit - see `docs/CREDIBILITY_PLAN.md` §2.2 |
-| Energy per cell written by a **magnon-assisted** write | **0.20 pJ** | (E), same derivation, 205 cells per event |
+| Energy of one wave event on the precedent bus (drive-power term) | **41 fJ** | (E), derived from (L) `P_C1` = 12.6 µW and (E) 3.26 ns transit - see `docs/CREDIBILITY_PLAN.md` §2.2 |
+| Energy per cell written by a **magnon-assisted** write | **0.20 fJ** | (E), same derivation, 205 cells per event |
 | Energy per cell written by a **conventional foundry MRAM** write | **5–20 pJ** | (E), assumption pending a cited foundry figure - **this is the number most in need of a citation** |
 | Energy per bit read out of MRAM | **0.05 pJ** | (E), assumption |
 | Digital multiply-accumulate | **swept, 0.1–10 pJ** | (E) - deliberately a sweep, because this number is contested and node-dependent |
@@ -371,8 +396,8 @@ N_CONV_MAC = 28 * 28 * F * F * K          # digital convolution MACs per image
 N_HEAD_MAC = D_FEAT * NCLS                # digital head MACs per image
 N_BITS = D_FEAT                          # persistent cells written per image
 
-E_WAVE = 41e-12                          # (E) one wave event
-E_WRITE_MAGNON = 0.20e-12                # (E) magnon-assisted write per cell
+E_WAVE = 41e-15                          # (E) one wave event (= 41 fJ)
+E_WRITE_MAGNON = 0.20e-15                # (E) magnon-assisted write per cell (= 0.20 fJ)
 E_WRITE_FOUNDRY = 10e-12                 # (E) foundry MRAM write per cell (mid of 5-20)
 E_READ = 0.05e-12                        # (E) MRAM read per bit, once
 E_CONFIG = 0.05e-12                      # (E) configuration switch write, per bit set
@@ -457,8 +482,8 @@ usable threshold.
 
 ("code", r"""
 rows = []
-for bits in (None, 8, 6, 5, 4, 3, 2):
-    for rel_amp_noise in (0.01, 0.02, 0.05):
+for bits in (None, 8, 6, 4, 2):
+    for rel_amp_noise in (0.01, 0.05):
         rng = np.random.default_rng(31)
         Ztr = conv_stack_analogue(Xtr, h, bits=bits, rel_amp_noise=rel_amp_noise,
                                   rng=np.random.default_rng(101))

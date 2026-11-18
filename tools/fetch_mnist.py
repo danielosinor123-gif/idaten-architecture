@@ -1,4 +1,4 @@
-\"\"\"Fetch the MNIST IDX files into ``data/mnist/`` (cached, no dependencies beyond urllib).
+'''Fetch the MNIST IDX files into ``data/mnist/`` (cached, no dependencies beyond urllib).
 
     python tools/fetch_mnist.py
 
@@ -8,7 +8,7 @@ http://yann.lecun.com/exdb/mnist/).
 
 If the network is unavailable, notebook 02 falls back to
 ``sklearn.datasets.load_digits`` (8x8, ~1800 samples) and says so in its output.
-\"\"\"
+'''
 import gzip
 import os
 import shutil
@@ -50,7 +50,7 @@ def fetch(force=False):
 
 
 def load(split="train"):
-    \"\"\"Return (images uint8 (N,28,28), labels uint8 (N,)).\"\"\"
+    '''Return (images uint8 (N,28,28), labels uint8 (N,)).'''
     if split == "train":
         img_p = os.path.join(OUT, "train-images-idx3-ubyte")
         lbl_p = os.path.join(OUT, "train-labels-idx1-ubyte")

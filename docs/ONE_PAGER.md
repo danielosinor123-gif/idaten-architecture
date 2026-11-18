@@ -42,10 +42,13 @@ W = cells switched per wave event ÷ energy of that wave event
 ```
 
 From published numbers only (E): a 1.70 GHz wave on a 40.96 µm bus transits in
-**3.26 ns**; the drive-power term is **41 pJ per event**; the bus holds **205**
-cells at a = 200 nm → **0.20 pJ per written cell**, against an assumed
-5–20 pJ/bit for a foundry MRAM write. **That 25–100× is the prize — and it is
-an assumption until measured.** It is the project's headline metric, measured
+**3.26 ns**; the drive-power term is **41 fJ per event**; the bus holds **205**
+cells at a = 200 nm → **0.20 fJ per written cell**, against an assumed
+5–20 pJ/bit for a foundry MRAM write. **That four-to-five-orders-of-magnitude
+gap is a naive bound, not a result** — it assumes the whole 205-cell event is
+written correctly and ignores transducer, driver and circuit overhead. It is an
+assumption until measured. The valuable quantity is not this ratio but `W`:
+cells switched per wave event. This is the project's headline metric, measured
 with error bars in Phase 0, and it is the first thing we will report, win or
 lose.
 

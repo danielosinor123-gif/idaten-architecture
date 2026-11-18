@@ -47,7 +47,7 @@ estimate · `(A)` hypothesis under test.
 
 ### K3 — Parallelism
 - **Measure:** cells switched per wave event, `N_cells`.
-- **Pass:** `N_cells ≥ 64` (i.e. `W ≥ 64 / 41 pJ ≈ 1.6 cells/pJ`).
+- **Pass:** `N_cells ≥ 64` (i.e. `W ≥ 64 / 41 fJ ≈ 1.6 cells/fJ`).
 - **Fail →** the architecture degenerates into a serial chain and the density
   argument disappears. **Fallback:** a serial magnonic interconnect, which is
   a much smaller and much more crowded field.

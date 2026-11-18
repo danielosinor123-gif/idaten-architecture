@@ -28,8 +28,9 @@ Additional self-imposed constraints:
 - **Chemistry.** Notebook 03 demonstrates *analogue-operator equivalence* for a
   linear Green's-function / Poisson operator. It does **not** claim that spin
   waves emulate Schrödinger or Kohn–Sham operators, and does **not** claim to
-  "solve DFT". PySCF is used only to supply an **independent** ground-truth
-  electron density for a separate cross-check.
+  "solve DFT". PySCF is used only as an **independent** quantum-chemistry
+  cross-check of the same geometry (SCF energy); it is not an input to the
+  analogue and is not compared to the analogue density.
 - **No fabricated-device claims.** Nothing here reports a fabricated, measured,
   or packaged device. Every device-level statement is (A) or (E).
 - **Two different GDS files, two different labels.** See §5.
@@ -195,6 +196,82 @@ explicit, stated fit method and reported with its r².
    error survived in two documents because the *claim* was plausible and
    nobody re-rendered the mask. Every geometry claim in this repository is now
    checked by re-rendering the file, not by re-reading the intent.
+
+---
+
+### 2.4 Stage B extension — executed on the local MX130
+
+The Idaten extension deck `tools/decks/idaten_stageB.mx3` was run on the
+MX130 (committed deck, 2000 × 160 × 1 cells at 50 nm, six `P₀` phase
+bands, 64 NiFe result elements coarse-grained to 100 nm × 50 nm at pitch
+200 nm). It completed and wrote **40 snapshots** of `m.Comp(1)`.
+
+| Quantity measured (S) | Result |
+|---|---|
+| Bus envelope log-linear fit, x = 10–45 µm | **r² = 0.0024** (ell = 114 µm) |
+| Same fit, x = 5–45 µm | r² = 0.0032 (ell = 111 µm) |
+| Same fit, x = 10–50 µm | r² = 0.0051 (ell = 90 µm) |
+| Time-averaged pattern contrast across the 64 result elements | **0.955** |
+| Result elements above half the maximum amplitude | **9** |
+
+**Gate K4 fails** for this bus. The local decay length is not reportable. The
+pattern is non-uniform — evidence that a fabricated landscape can imprint a
+spatially structured pattern, not evidence of switching, reversal, or a
+write-error rate. Committed artefacts: `data/lab/stageB_summary.json`,
+`data/lab/stageB_elements.csv`, `figures/01_stageB_pattern.png`.
+Any switching claim remains tied to the published threshold values (L), not to
+this simulation.
+
+---
+
+### 2.5 Stage A — published-deck reproduction, run on Kaggle (Tesla T4)
+
+Stage A re-runs the authors' own deck
+`SupplementFig6__Sat_S1.0__14mT.mx3` (12 ns driven transient, full
+`minimize()`/`relax()` init exactly as published) to establish that the
+precedent reproduces on **(S)** before any Idaten extension is attempted.
+
+Because the local MX130 (2 GB VRAM) cannot hold the 8192-cell-long mesh, the
+run was executed on a Kaggle Tesla T4 (15 GB) via the kernel
+`danielvking/idaten-stage-a-mumax`; assets (deck, `CPW32_40um.ovf`, mumax³
+3.12 binary, and the binary's own CUDA 11 runtime libs `libcufft.so.11` /
+`libcurand.so.10`, which the T4 image does not ship) are the dataset
+`danielvking/idaten-stagea-assets`. The mumax³ binary resolves those libs
+through its `RUNPATH $ORIGIN/lib`; they are staged into `work/lib/` by the
+kernel script.
+
+Run facts (S — from the kernel log and `table.txt`):
+
+| Quantity | Value |
+|---|---|
+| Mode | fresh — full published init (no checkpoint resume) |
+| Wall time on T4 | ≈ 7.8 min for the 12 ns transient |
+| Simulated span | 12.000 / 12 ns (100 %), `mumax exited rc=0` |
+| `table.txt` | 2,402 rows, t = 0 → 1.2×10⁻⁸ s, columns `t, mx, my, mz` |
+| `Finish.ovf` | OVF 2.0, mesh 40.96 µm × 0.16 µm (8192 × 32 × 1) |
+| Outputs pulled | `data/stageA_kaggle/` (`table.txt`, `mStart.ovf`, `Finish.ovf`, runlog, kernel log) |
+
+Two documented deviations from the authors' deck, both sampling-only:
+
+1. **Autosave cadence 10 ps → 50 ps** for `mx_center` and `B_ext_Line`
+   (reduces output volume; does not alter the dynamics — mumax³ internal
+   stepping is untouched).
+2. **[resume path only]** the init block is replaced by `m.LoadFile` of a
+   checkpoint. The run reported here used the fresh path, so deviation 2 did
+   not apply.
+
+mumax³ empties `deck.out` at startup, so checkpoints are kept outside it
+(`stageA_ckpt/`); the committed copies are byte-identical to the `deck.out`
+ones and were de-duplicated before commit (MD5-verified).
+
+**Environment note (18 Nov 2026):** the development machine suffered a hard
+crash (Event 41) at 12:42 that same day, mid-build. It left a 0-byte
+`dbTechLayer.cpp.o` in the OpenROAD tree, which later surfaced as undefined
+`odb::dbTechLayer` symbols at link time; the corrupt object was found by
+size, deleted, and recompiled. This is recorded because the failure mode
+(mtime-valid, content-empty object) is invisible to a normal build log and
+cost a full debug cycle — any re-run on this machine should check for
+zero-byte build products first.
 
 ---
 

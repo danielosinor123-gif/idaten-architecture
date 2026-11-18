@@ -1,0 +1,42 @@
+{
+  "tag": "(S)",
+  "snapshots": 40,
+  "t_first_ns": 0.7160558754171367,
+  "t_last_ns": 29.200183709294524,
+  "bus_decay_fits": {
+    "5-45": {
+      "ell_um": 111.25424682408423,
+      "r2": 0.0032134229835080186,
+      "n": 800
+    },
+    "10-45": {
+      "ell_um": 113.7295679488324,
+      "r2": 0.0023581275451214356,
+      "n": 700
+    },
+    "10-50": {
+      "ell_um": 90.3734270042058,
+      "r2": 0.005054992445400863,
+      "n": 800
+    },
+    "15-45": {
+      "ell_um": 99.26325495973143,
+      "r2": 0.0023035196251410817,
+      "n": 600
+    },
+    "5-90": {
+      "ell_um": 1018.1759989180069,
+      "r2": 0.00017906280577384415,
+      "n": 1700
+    },
+    "10-95": {
+      "ell_um": null,
+      "r2": 2.1998590958194342e-05,
+      "n": 1700
+    }
+  },
+  "result_array_elements": 64,
+  "result_array_contrast_over_elements": 0.9548933732488759,
+  "n_elements_above_half_max": 9,
+  "note": "Spatial pattern only. No switching threshold, reversal probability, or write-error rate is measured. Compare against the frozen target M, not against whatever this run produced."
+}

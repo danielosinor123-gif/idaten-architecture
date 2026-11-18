@@ -4,9 +4,9 @@ Supports both section types emitted by mumax3 3.12:
   * '# Begin: Data Binary 4'  -> 4-byte marker prefix, then float32 data
   * '# Begin: Data Text'      -> ASCII whitespace-separated floats
 
-The data ordering is x-fastest, then y, then z, with 'valuedim' consecutive
+The data ordering is y-fastest, then x, then z, with 'valuedim' consecutive
 components per mesh point (mumax3 convention). This is verified empirically
-against the CPW antenna mask in the structural probe.
+against the CPW launch mask in the structural probe.
 
 Validated against real mumax3 3.12 output in Downloads/gdsii_run/ovf_samples/.
 """

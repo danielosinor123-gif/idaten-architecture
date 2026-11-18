@@ -1,0 +1,298 @@
+//mumax 3.12 [linux_amd64 go1.22.4(gc) CUDA-12.0]
+//commit hash: 6e5c98bb
+//CPU info: Intel(R) Xeon(R) CPU @ 2.00GHz, Cores: 2, MHz: 2000.186
+//GPU info: Tesla T4(14911MB), CUDA Driver 13.0, cc=7.5, using cc=75 PTX
+//OS  info: Ubuntu 24.04.4 LTS, Hostname: c9b9148b8e51
+//Timestamp: 2026-11-18 20:44:58
+//(c) Arne Vansteenkiste, Dynamat LAB, Ghent University, Belgium
+//This is free software without any warranty. See license.txt
+//********************************************************************//
+//  If you use mumax in any work or publication,                      //
+//  we kindly ask you to cite the references in references.bib        //
+//********************************************************************//
+//output directory: deck.out/
+//starting GUI at http://127.0.0.1:35367
+SetPBC(0, 0, 2048)
+SetGridsize(8192, 32, 1)
+SetCellsize(5e-9, 5e-9, 5e-9)
+OutputFormat = OVF2_TEXT
+Bn := -14.0e-3
+S := 1.00
+EdgeSmooth = 0
+i := 0
+c := rect(100e-9, 20e-9).transl(-5000e-9, 30e-9, 0)
+i++
+c1 := c.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c2 := c1.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c3 := c2.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c4 := c3.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c5 := c4.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c6 := c5.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c7 := c6.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c8 := c7.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c9 := c8.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c10 := c9.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c11 := c10.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c12 := c11.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c13 := c12.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c14 := c13.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c15 := c14.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c16 := c15.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c17 := c16.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c18 := c17.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c19 := c18.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c20 := c19.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c21 := c20.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c22 := c21.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c23 := c22.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c24 := c23.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c25 := c24.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c26 := c25.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c27 := c26.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c28 := c27.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c29 := c28.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c30 := c29.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c31 := c30.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c32 := c31.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c33 := c32.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c34 := c33.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c35 := c34.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c36 := c35.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c37 := c36.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c38 := c37.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c39 := c38.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c40 := c39.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c41 := c40.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c42 := c41.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c43 := c42.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c44 := c43.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c45 := c44.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c46 := c45.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c47 := c46.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c48 := c47.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c49 := c48.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+i++
+c50 := c49.add(rect(100e-9, 20e-9).transl(-5000e-9+i*200e-9, 30e-9, 0))
+b := rect(40960e-9, 100e-9).transl(0e-9, -30e-9, 0)
+setgeom(c50.add(b))
+// Initializing geometry 3 %
+// Initializing geometry 100 %
+saveas(geom, "YIG1")
+defregion(252, yrange(20e-9, inf))
+saveas(geom, "totGeom")
+Msat.setregion(252, 800e3)
+Aex.setregion(252, 13e-12)
+alpha.setregion(252, 0.01)
+nxp := 2.0
+mult := 2.0
+alstart := 0.0009
+alstop := 0.08
+xstart := 40960 - 20480 - 2500
+xstop := 40960 - 20480
+n := 2
+a := (alstop - alstart) / Pow((xstop-xstart), nxp)
+cX := 5e-9
+NB := ((xstop - xstart) * 1e-9) / cX
+for i := 0; i < NB/mult; i++ {
+	xcurr := xstart*1e-9 + i*cX*mult
+	DefRegion(i, (rect(cX*mult, 100e-9).transl(xcurr+(cX*mult)/2., -30e-9, 0)).add(rect(cX*mult, 100e-9).transl(-xcurr-(cX*mult)/2., -30e-9, 0)))
+	alp := a*Pow(((xcurr*1e9)-xstart), n) + alstart
+	alpha.setregion(i, alp)
+	Aex.setregion(i, 3.75e-12)
+	Msat.setregion(i, 140.0e3)
+}
+DefRegion(251, rect(40960e-9-5000e-9+10e-9, 100e-9).transl(0e-9, -30e-9, 0))
+alpha.setregion(251, 0.0009)
+Aex.setregion(251, 3.75e-12)
+Msat.setregion(251, 140.0e3)
+ext_scaleExchange(252, 251, S)
+m = Uniform(-0.01, -0.01, -1.0)
+Ba := -100.0e-3
+B_ext = vector(0.01*Ba, 0.01*Ba, Ba)
+minimize()
+//Did not use cached kernel: open /tmp/mumax3kernel_[8192 32 1]_[0 0 2048]_[5e-09 5e-09 5e-09]_6_0 0.ovf: no such file or directory
+// Calculating demag kernel 0 %
+// Calculating demag kernel 1 %
+// Calculating demag kernel 2 %
+// Calculating demag kernel 3 %
+// Calculating demag kernel 4 %
+// Calculating demag kernel 5 %
+// Calculating demag kernel 6 %
+// Calculating demag kernel 7 %
+// Calculating demag kernel 8 %
+// Calculating demag kernel 9 %
+// Calculating demag kernel 10 %
+// Calculating demag kernel 11 %
+// Calculating demag kernel 12 %
+// Calculating demag kernel 13 %
+// Calculating demag kernel 14 %
+// Calculating demag kernel 15 %
+// Calculating demag kernel 16 %
+// Calculating demag kernel 17 %
+// Calculating demag kernel 18 %
+// Calculating demag kernel 19 %
+// Calculating demag kernel 20 %
+// Calculating demag kernel 21 %
+// Calculating demag kernel 22 %
+// Calculating demag kernel 23 %
+// Calculating demag kernel 24 %
+// Calculating demag kernel 25 %
+// Calculating demag kernel 26 %
+// Calculating demag kernel 27 %
+// Calculating demag kernel 28 %
+// Calculating demag kernel 29 %
+// Calculating demag kernel 30 %
+// Calculating demag kernel 31 %
+// Calculating demag kernel 32 %
+// Calculating demag kernel 33 %
+// Calculating demag kernel 34 %
+// Calculating demag kernel 35 %
+// Calculating demag kernel 36 %
+// Calculating demag kernel 37 %
+// Calculating demag kernel 38 %
+// Calculating demag kernel 39 %
+// Calculating demag kernel 40 %
+// Calculating demag kernel 41 %
+// Calculating demag kernel 42 %
+// Calculating demag kernel 43 %
+// Calculating demag kernel 44 %
+// Calculating demag kernel 45 %
+// Calculating demag kernel 46 %
+// Calculating demag kernel 47 %
+// Calculating demag kernel 48 %
+// Calculating demag kernel 49 %
+// Calculating demag kernel 50 %
+// Calculating demag kernel 51 %
+// Calculating demag kernel 52 %
+// Calculating demag kernel 53 %
+// Calculating demag kernel 54 %
+// Calculating demag kernel 55 %
+// Calculating demag kernel 56 %
+// Calculating demag kernel 57 %
+// Calculating demag kernel 58 %
+// Calculating demag kernel 59 %
+// Calculating demag kernel 60 %
+// Calculating demag kernel 61 %
+// Calculating demag kernel 62 %
+// Calculating demag kernel 63 %
+// Calculating demag kernel 64 %
+// Calculating demag kernel 65 %
+// Calculating demag kernel 66 %
+// Calculating demag kernel 67 %
+// Calculating demag kernel 68 %
+// Calculating demag kernel 69 %
+// Calculating demag kernel 70 %
+// Calculating demag kernel 71 %
+// Calculating demag kernel 72 %
+// Calculating demag kernel 73 %
+// Calculating demag kernel 74 %
+// Calculating demag kernel 75 %
+// Calculating demag kernel 76 %
+// Calculating demag kernel 77 %
+// Calculating demag kernel 78 %
+// Calculating demag kernel 79 %
+// Calculating demag kernel 80 %
+// Calculating demag kernel 81 %
+// Calculating demag kernel 82 %
+// Calculating demag kernel 83 %
+// Calculating demag kernel 84 %
+// Calculating demag kernel 85 %
+// Calculating demag kernel 86 %
+// Calculating demag kernel 87 %
+// Calculating demag kernel 88 %
+// Calculating demag kernel 89 %
+// Calculating demag kernel 90 %
+// Calculating demag kernel 91 %
+// Calculating demag kernel 92 %
+// Calculating demag kernel 93 %
+// Calculating demag kernel 94 %
+// Calculating demag kernel 95 %
+// Calculating demag kernel 96 %
+// Calculating demag kernel 97 %
+// Calculating demag kernel 98 %
+// Calculating demag kernel 99 %
+// Calculating demag kernel 100 %
+//Cached kernel: /tmp/mumax3kernel_[8192 32 1]_[0 0 2048]_[5e-09 5e-09 5e-09]_6_
+MaxErr = 0.5e-7
+relax()
+saveas(m, "m_min100mT.ovf")
+saveas(B_ext, "Bext_min100mT.ovf")
+saveas(m_full, "m_full_min100mT")
+B_ext = vector(0.01*Bn, 0.01*Bn, Bn)
+MaxErr = 0.5e-7
+minimize()
+relax()
+saveas(m, "mStart.ovf")
+saveas(B_ext, "Bstart.ovf")
+saveas(m_full, "Mfull_start")
+save(B_eff)
+mx := m.Comp(0)
+mx_center := CropY(mx, 0, 25)
+mx_center_line := CropY(mx, 10, 11)
+driv := 0.001 / 25.
+f := 1.0e9
+fdel := 20. * f * 2. * pi
+toff := 3. / f
+time := 12e-9
+B_ext.Add(LoadFile("CPW32_40um.ovf"), driv*sin((t-toff)*fdel)/((t-toff)*fdel))
+B_ext_Line := Crop(B_ext, 0, 8192, 0, 1, 0, 1)
+autosave(B_ext_Line, 50e-12)
+autosave(mx_center, 50e-12)
+autosave(mx_center_line, 5e-12)
+tableautosave(5e-12)
+run(time)
+saveas(m, "Finish.ovf")
+//********************************************************************//
+//Please cite the following references, relevant for your simulation. //
+//See bibtex file in output folder for justification.                 //
+//********************************************************************//
+//   * Vansteenkiste et al., AIP Adv. 4, 107133 (2014).
+//   * Exl et al., J. Appl. Phys. 115, 17D118 (2014).

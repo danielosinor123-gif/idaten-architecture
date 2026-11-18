@@ -10,6 +10,8 @@ Contents:
 | File | What |
 |---|---|
 | `antenna.ovf` | the CPW launch used by the series — a flared, diamond/lens-shaped launch at the x = 0.05 µm edge (see `tools/probe_antenna.py`); bounding box x ∈ [0.050, 0.500] µm, y ∈ [2.050, 6.000] µm |
+| `stageB_summary.json` | Stage B spatial-pattern metrics (S): 40 snapshots, envelope fit windows + r², result-array contrast |
+| `stageB_elements.csv` | per-result-element time-averaged amplitude (64 rows) |
 | `_summary.json` | per-deck archive records: snapshot counts, bad-file lists, fit metrics, archive size, run duration, and material parameters (Msat / Aex / α / B_ext / f₀) |
 | `profiles.csv` | one flat row per deck, for quick reading |
 

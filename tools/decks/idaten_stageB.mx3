@@ -6,7 +6,8 @@
 //   Zenodo 10.5281/zenodo.7714181  (CC-BY-4.0)
 //
 // YIG bus; Ni81Fe19 switching elements; 100 nm long on a = 200 nm pitch;
-// CPW edge antenna at the y = 0 edge (x = 2..6 um).
+// CPW launch at the x = 0.05 um edge (flared, hugging x = 0.05 um; see
+// PROVENANCE.md section 2.3) driving waves along +x.
 //
 // WHAT THIS STAGE MEASURES
 //   Stage A establishes that a propagating magnon can lower the switching

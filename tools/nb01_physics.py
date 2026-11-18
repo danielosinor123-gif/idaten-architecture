@@ -41,9 +41,10 @@ CELLS = [
    analysed from its archived compact form. **The decay length is not
    recoverable from it** (r² = 0.001–0.004 for every material and frequency).
    That is the result, not a failure to hide.
-3. Stage B fixes the Idaten extension deck and its acceptance metrics. The
-   deck is shipped; **no Idaten device result is claimed here** — there is no
-   fabricated device and no completed Stage-B run yet.
+3. Stage B defines the Idaten extension deck and its acceptance metrics. The
+   deck has been executed on the MX130 (40 snapshots); the honest result is a
+   spatial pattern contrast with **no switching claim** — there is no fabricated
+   device and no reversal measurement.
 4. Stage C states the material-portfolio plan and the hematite (antiferro-
    magnetic) branch that mumax⁺ exists for.
 
@@ -227,21 +228,35 @@ rows = list(csv.DictReader(open(os.path.join(LAB, "profiles.csv"), encoding="utf
 # profiles.csv is already filtered to the Idaten material series by
 # tools/build_lab_summary.py; prior-programme diagnostics are not committed.
 idaten = rows
+
+def to_float(s):
+    try:
+        v = float(s)
+    except Exception:
+        return float("nan")
+    return v if np.isfinite(v) or v in (np.inf, np.inf) else float("nan")
+
 print(f"{'deck':<26} {'snaps':>6} {'r2_x10_45':>10} {'ell_rms':>9} {'contrast':>9}")
 for r in sorted(idaten, key=lambda r: r["deck"]):
-    print(f"{r['deck']:<26} {int(r['snapshots']):>6} "
-          f"{float(r['r2_rms_x10_45']):>10.6f} {float(r['ell_rms_x10_45_um']):>9.2f} "
-          f"{float(r['contrast_peak_to_valley']):>9.4f}")
+    r2 = to_float(r["r2_rms_x10_45"])
+    ell = to_float(r["ell_rms_x10_45_um"])
+    con = to_float(r["contrast_peak_to_valley"])
+    r2s = f"{r2:.6f}" if np.isfinite(r2) else "   nan"
+    ells = f"{ell:.2f}" if np.isfinite(ell) else "   inf"
+    cons = f"{con:.4f}" if np.isfinite(con) else "   nan"
+    print(f"{r['deck']:<26} {int(r['snapshots']):>6} {r2s:>10} {ells:>9} {cons:>9}")
 print()
-real_r2 = [float(r["r2_rms_x10_45"]) for r in idaten if r["r2_rms_x10_45"] not in ("", "nan", "inf")]
+real_r2 = [to_float(r["r2_rms_x10_45"]) for r in idaten]
+real_r2 = [v for v in real_r2 if np.isfinite(v)]
 print(f"min r2 = {min(real_r2):.6f}   max r2 = {max(real_r2):.6f}")
 print("Gate K4 (r2 >= 0.8) FAILS for every deck — the quantity is NOT reportable.")
 """),
 
 ("code", r"""
 fig, ax = plt.subplots(figsize=(10, 4.0))
-names = [r["deck"] for r in sorted(idaten, key=lambda r: r["deck"])]
-r2 = [float(r["r2_rms_x10_45"]) for r in sorted(idaten, key=lambda r: r["deck"])]
+plot_rows = [r for r in idaten if np.isfinite(to_float(r["r2_rms_x10_45"]))]
+names = [r["deck"] for r in plot_rows]
+r2 = [to_float(r["r2_rms_x10_45"]) for r in plot_rows]
 colors = plt.cm.viridis(np.linspace(0.15, 0.85, len(r2)))
 ax.bar(names, r2, color=colors)
 ax.axhline(0.8, color="#E45756", ls="--", lw=1.5, label="K4 gate (r² = 0.8)")
@@ -278,8 +293,9 @@ reportable from this series.
 Stage A reproduces a published threshold reduction. Stage B asks the Idaten
 question: **can the fabricated geometry (`P₀`) shape the propagating wave so
 that the amplitude pattern downstream is the desired code?** The deck is
-`tools/decks/idaten_stageB.mx3`; its acceptance metrics are defined here,
-before any output is trusted.
+`tools/decks/idaten_stageB.mx3`; the MX130 run has completed (40 snapshots of
+`m.Comp(1)`). The analysis below records the outcome; it is reported, not
+trusted — it measures a spatial pattern, not reversal or error rate.
 
 **Design (A):**
 
@@ -330,15 +346,31 @@ for name, ok in checks:
 assert all(ok for _, ok in checks), "deck structural check failed"
 print("\ndeck structural checks passed")
 print()
-print("Status: DECK SHIPPED, NOT YET RUN.")
-print("Run: bash run_stageB.sh  (WSL, MX130). The acceptance metrics are:")
+print("Stage B status on this machine: the deck HAS BEEN RUN (MX130, 40 snapshots")
+print("of m.Comp(1)) via Downloads/gdsii_run/run_stageB.sh; the analysis is in")
+print("tools/analyze_stageB.py.")
 print()
-print("  A1. Spatial contrast of m.Comp(1) at the result-array x positions")
-print("      after the drive burst ends, versus the unpatterned control.")
-print("  A2. Fringe count / phase coherence length across the array.")
-print("  A3. Contrast vs pattern band index — does the known code map to")
-print("      a measurable output alphabet? If not, P0 coding is not viable")
-print("      at this geometry and the Stage-B gate fails.")
+print("Metric definitions actually used (S):")
+print("  A1. Contrast of the time-averaged |m.Comp(1)| across the 64 result elements,")
+print("      after the burst ends (last 10 snapshots).")
+print("  A2. Bus envelope E(x) = rms_y |m.Comp(1)| and its log-linear decay fit +")
+print("      r2 over stated x windows.")
+print("A3 (threshold switching) cannot be obtained from this deck because the")
+print("elements are coarse-grained to 100 x 50 nm; switching claims go to the")
+print("published threshold values, not to this simulation.")
+"""),
+
+("code", r"""
+# Read the Stage B analysis output if present.
+sb = os.path.join(REPO, "data", "lab", "stageB_summary.json")
+if os.path.exists(sb):
+    summary = json.load(open(sb, encoding="utf-8"))
+    print(json.dumps(summary, indent=2))
+else:
+    print("stageB_summary.json not present yet — run:")
+    print("  wsl -d Ubuntu-24.04 -u root -- \\")
+    print("    /root/eda/build-env/bin/python3 tools/analyze_stageB.py \\")
+    print("    /root/mumax/idaten_stageB.out $(pwd)")
 """),
 
 ("md", r"""
@@ -354,7 +386,7 @@ experiment that could disprove it.
 | YIG bus | spin-wave amplitude/phase | CPW burst | stateless | result array absorbs | 36 nW into precession (L); 3.26 ns transit (E) | no propagating mode at k₁ detected |
 | P₀ phase grating | local wave phase | fixed geometry | fixed (not at runtime) | wavefield downstream | 0 runtime energy (fixed) (E) | measured H(k) ≠ designed grating phase |
 | `C_k` config switches (MRAM bits) | wave-pipeline route via switch resistance/phase | input coding | non-volatile; reset by foundry SOT/eMRAM process (L) | wavefield | 0.05 pJ/bit (E) | measured switch-phase spread larger than the π-step budget |
-| NiFe result element (`M_k` cell) | magnetisation orientation (up/down) | magnon-assisted reversal | non-volatile; reset by foundry SOT (or strain hypothesis, optional) | MRAM sense amplifier | 0.20 pJ/cell (E, drive-power term / 205 cells) | wave-absent threshold same as wave-present (K1 fails) |
+| NiFe result element (`M_k` cell) | magnetisation orientation (up/down) | magnon-assisted reversal | non-volatile; reset by foundry SOT (or strain hypothesis, optional) | MRAM sense amplifier | 0.20 fJ/cell (E, drive-power term / 205 cells) | wave-absent threshold same as wave-present (K1 fails) |
 
 **The `P₀` code and the `M_k` cell are the same physical device class**, so
 the ledger is deliberately symmetric: the wave is the switch, the cell is
@@ -407,7 +439,7 @@ pattern code → Stage C portfolio → mumax⁺ hematite.
 | The published 2023 result has not itself been re-run on this machine | — | **pending** (MX130) |
 | The local material series has no reportable decay length | (S) | **done here — r² 0.001–0.004** |
 | The CPW antenna is a diamond/lens-shaped flared launch at the x = 0 edge, not a y = 0 stripe | (S) | **corrected, `tools/probe_antenna.py`** |
-| Stage B deck exists with stated coarse-graining caveat and 64 result elements | (A) | shipped, not run |
+| Stage B deck exists, was executed on the MX130, and its honest outcome (r² ≈ 0.002; element contrast 0.955) is recorded; no switching claim | (S)/(A) | run and reported; not yet run at full element resolution |
 | The write-amplification metric W = cells/E_event is the headline quantity | (E)/(L) | defined in `docs/CREDIBILITY_PLAN.md` §2 |
 | Any claim of a fabricated or measured device | — | **not claimed anywhere in this repository** |
 

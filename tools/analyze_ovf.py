@@ -1,7 +1,8 @@
 """Wave-propagation metrics from mumax3 OVF snapshot series.
 
 Geometry (all lab decks): grid 2000 x 160 x 1, cell 50 nm x 50 nm x 1.2 um.
-  x = propagation axis, 100 um long, CPW antenna at the y=0 edge (x = 2..6 um).
+  x = propagation axis, 100 um long, CPW launch at the x = 0.05 um edge
+  (see PROVENANCE.md section 2.3 and tools/probe_antenna.py)
   y = transverse axis, 8 um wide.
 Data ordering in mumax3 OVF: y fastest, then x, then z (components consecutive).
 

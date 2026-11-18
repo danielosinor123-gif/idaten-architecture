@@ -1,0 +1,8 @@
+# Evidence data must stay byte-exact (MD5-verified in PROVENANCE.md §2.5)
+*.ovf -text
+*.npz -text
+*.gds -text
+*.png -text
+*.csv text eol=lf
+*.mx3 text eol=lf
+*.json text eol=lf
