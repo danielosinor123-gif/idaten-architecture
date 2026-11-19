@@ -1,0 +1,6 @@
+[10:34:39] settled: t=1.000e-10 s, fixed dt=2.000e-13 s
+[10:35:40] sim t=1.980 / 8.0 ns (24.7%), dt=2.00e-13 s, wall 63 s
+[10:36:40] sim t=3.880 / 8.0 ns (48.5%), dt=2.00e-13 s, wall 123 s
+[10:37:40] sim t=5.760 / 8.0 ns (72.0%), dt=2.00e-13 s, wall 183 s
+[10:38:40] sim t=7.640 / 8.0 ns (95.5%), dt=2.00e-13 s, wall 243 s
+[10:38:51] DONE t=8.000 ns, wall 255 s -> /kaggle/working/hematite_full15

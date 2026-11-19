@@ -1,0 +1,24 @@
+[{"stream_name":"stdout","time":1.9126609829999999,"data":"Tesla T4, 7.5, 15360 MiB\n"}
+,{"stream_name":"stdout","time":1.912701513,"data":"Tesla T4, 7.5, 15360 MiB\n"}
+,{"stream_name":"stdout","time":1.920101646,"data":"[10:14:23] installing mumaxplus==1.2.2 from PyPI ...\n"}
+,{"stream_name":"stdout","time":14.373267264,"data":"[10:14:35] mumaxplus imported, FP_PRECISION=SINGLE\n"}
+,{"stream_name":"stdout","time":14.373294339,"data":"[10:14:35] assets dir: /kaggle/input/datasets/danielvking/idaten-hematite-assets\n"}
+,{"stream_name":"stdout","time":24.350643952,"data":"GPU_SANITY_OK t= 9.999999960041972e-13\n"}
+,{"stream_name":"stdout","time":24.350674559,"data":"\n"}
+,{"stream_name":"stdout","time":24.350678639,"data":"[10:14:45] running deck: idaten_hematite_mumaxplus.py --nx 100 --ny 16 --t-settle 50e-12 --t-run 2e-10 --table-dt 10e-12 --nprobe 4 --out /kaggle/working/hematite_smoke --max-s 37777.56830358505\n"}
+,{"stream_name":"stdout","time":26.18118497,"data":"[10:14:47] settled: t=5.000e-11 s, fixed dt=2.000e-13 s\n"}
+,{"stream_name":"stdout","time":30.430829865,"data":"[10:14:51] DONE t=0.200 ns, wall 6 s -\u003e /kaggle/working/hematite_smoke\n"}
+,{"stream_name":"stdout","time":30.431191129,"data":"[10:14:51] deck rc=0 wall=6s -\u003e /kaggle/working/smoke.log\n"}
+,{"stream_name":"stdout","time":30.431208937,"data":"[10:14:51] smoke rc=0\n"}
+,{"stream_name":"stdout","time":30.431213927,"data":"[10:14:51] running deck: idaten_hematite_mumaxplus.py --nx 1000 --ny 80 --f0 1.70e9 --t-settle 100e-12 --t-run 8e-9 --table-dt 20e-12 --nprobe 200 --out /kaggle/working/hematite_full --max-s 37771.487721681595\n"}
+,{"stream_name":"stdout","time":33.451586497,"data":"[10:14:54] settled: t=1.000e-10 s, fixed dt=2.000e-13 s\n"}
+,{"stream_name":"stdout","time":93.83116572,"data":"[10:15:55] sim t=1.880 / 8.0 ns (23.5%), dt=2.00e-13 s, wall 63 s\n"}
+,{"stream_name":"stdout","time":154.438813734,"data":"[10:16:55] sim t=3.700 / 8.0 ns (46.3%), dt=2.00e-13 s, wall 124 s\n"}
+,{"stream_name":"stdout","time":214.730540521,"data":"[10:17:56] sim t=5.500 / 8.0 ns (68.8%), dt=2.00e-13 s, wall 184 s\n"}
+,{"stream_name":"stdout","time":274.963469882,"data":"[10:18:56] sim t=7.300 / 8.0 ns (91.3%), dt=2.00e-13 s, wall 245 s\n"}
+,{"stream_name":"stdout","time":298.42277764,"data":"[10:19:19] DONE t=8.000 ns, wall 268 s -\u003e /kaggle/working/hematite_full\n"}
+,{"stream_name":"stdout","time":298.423780016,"data":"[10:19:19] deck rc=0 wall=268s -\u003e /kaggle/working/full.log\n"}
+,{"stream_name":"stdout","time":298.423792927,"data":"[10:19:19] full 1.70 GHz rc=0\n"}
+,{"stream_name":"stdout","time":298.423797976,"data":"[10:19:19] running deck: idaten_hematite_mumaxplus.py --nx 1000 --ny 80 --f0 15e9 --b-amp 1e-4 --t-settle 100e-12 --t-run 8e-9 --table-dt 20e-12 --nprobe 200 --out /kaggle/working/hematite_full15 --max-s 37503.49510002136\n"}
+,{"stream_name":"stdout","time":301.302586695,"data":"[10:19:22] settled: t=1.000e-10 s, fixed dt=2.000e-13 s\n"}
+]

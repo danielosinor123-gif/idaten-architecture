@@ -444,8 +444,77 @@ Honest reading: f_dom tracks Msat (higher-Msat materials ring higher), and
 no material attenuates the wave within the 100 µm bus at this drive — but
 the 4 ns window at ~2 GHz gives only ~8 cycles at probe amplitudes
 ~10⁻⁴–10⁻³, so group velocity is **not resolved** from this run; a longer
-run is the stated follow-up. The hematite arm still needs mumax⁺ 1.2.2
-(not installed; no public binary checked yet) — unchanged.
+run is the stated follow-up. **The hematite arm has since run as Stage D
+on mumax⁺ 1.2.2 — see §4b below.**
+"""),
+
+("md", r"""
+## 4b. Stage D — the hematite arm, actually run (mumax⁺ 1.2.2 wheel, Kaggle T4, (S))
+
+**Why a separate solver:** hematite is an antiferromagnet above its Morin
+temperature, so the wave variable is the Néel vector **n**, and mumax³
+(ferromagnetic LLG) cannot represent it. mumax⁺ 1.2.2 (PyPI wheel,
+GPL-3.0-only) has the `Antiferromagnet` class. The wheel's embedded PTX
+targets sm_52 only: the local MX130 (sm_61, CUDA 13 driver) cannot JIT it,
+the Kaggle T4 (sm_75, CUDA 13.0) can — so all mumax⁺ runs go to Kaggle
+(kernel `danielvking/idaten-hematite-mumaxplus` v6, deck dataset
+`danielvking/idaten-hematite-assets`; deck
+`tools/decks/idaten_hematite_mumaxplus.py`).
+
+**Parameter mapping (derived from the v1.2.2 source `afmexchange.cu`,
+not guessed):** `afmex_cell = −H_E·Ms·latcon²/4`, `afmex_nn = −A_T·Ms`.
+(L) inputs: Ms = 9.0×10⁵ A/m, α = 1.1×10⁻⁵ (Hamdi, Posva & Grundler, PRM
+**7**, 054407 (2023)), H_E = 1040 T (arXiv:2610.08030), latcon = 0.5 nm,
+μ₀A = 9.153×10⁻⁶ T·µm² (arXiv:2212.11887), easy-plane H_a = 1 Oe, 30 mT
+bias. Deviations: DMI = 0, demag off ((E) net M ~ 10⁻⁵ Ms).
+
+**Geometry:** 100 µm × 8 µm × 100 nm bus, 100 nm cells, fixed dt = 0.2 ps,
+8 ns, 200 probes at 0.5 µm spacing; z-stripe RF launch at x ≈ 1 µm, burst
+0.5–3 ns. Two arms: **1.70 GHz** (below the (E) qFM gap 12.78 GHz) and
+**15 GHz at 0.1 mT** (above the gap, linear regime).
+
+**What came out (S), full numbers in `data/hematite_kaggle/hematite_summary.json`
+and PROVENANCE §2.8:**
+
+| Quantity | 1.70 GHz arm | 15 GHz arm | Reference |
+|---|---|---|---|
+| launcher-probe f_dom | — | **14.23 GHz** (drive 15 GHz) | drive (L) |
+| global ring-down f_dom | 2.51 GHz (forced, below gap) | **12.97 GHz** | (E) gap 12.78 GHz → **1.5 % match** |
+| end-field decay ℓ | no decay fit | **≈ 2477 µm** ≫ 100 µm bus | (L) 1.1 cm at 30 mT |
+| v_g (xcorr, 198 probe pairs) | 149 ± 3339 m/s — not resolved | 221 ± 4113 m/s — not resolved | (E) 24.3 km/s, (L) 10–23 km/s |
+| intracell angle min / post-burst mean | 2.33° @ 0.14 ns / 123° | 2.33° @ 0.14 ns / 123° | 180° = perfect AFM |
+
+Reading: the **gap frequency is reproduced to 1.5 %**, which validates the
+afmex_cell ↔ H_E mapping — the single most important credibility check for
+this arm, because it says the simulated AFM exchange stiffness is the
+literature one. Below the gap there is only a forced response (no
+propagating branch), exactly as the dispersion predicts. Above the gap the
+ring-down is a **standing/global mode** (arrival times simultaneous at all
+200 probes), so v_g is **not resolved** from this window — the honest
+follow-up is a longer run with a windowed launch. The intracell-angle
+transient (2.33° at burst onset) means the drive is locally nonlinear;
+linear-regime readings carry that caveat.
+"""),
+
+("code", r"""
+hd = os.path.join(REPO, "data", "hematite_kaggle", "hematite_summary.json")
+if os.path.exists(hd):
+    s = json.load(open(hd, encoding="utf-8"))
+    print("solver:", s["solver"])
+    print("v_g (E) max =", s["v_g_pred_E_m_s"], "m/s ; (L)", s["v_g_lit_L_m_s"])
+    for name, r in s["runs"].items():
+        if r["table_rows"] < 100:
+            continue
+        print("---", name)
+        print("  drive %.2f GHz | gap (E) %.3f GHz | f_dom global %.4f GHz | f_dom probe0 %.4f GHz"
+              % (r["drive_f0_GHz_L"], r["qfm_gap_E_GHz"],
+                 r.get("f_dom_global_nz_GHz") or float("nan"),
+                 r.get("f_dom_probe0_nz_GHz") or float("nan")))
+        print("  l_env_field_um:", r.get("l_env_field_um"),
+              "| v_g xcorr:", r.get("v_g_xcorr_m_s"), "+/-", r.get("v_g_xcorr_spread_m_s"),
+              "m/s | angle min/max deg:", r.get("intracell_angle_min_deg"), r.get("intracell_angle_max_deg"))
+else:
+    print("hematite_summary.json not present yet — see PROVENANCE §2.8 for the Kaggle run")
 """),
 
 ("md", r"""
@@ -458,6 +527,8 @@ run is the stated follow-up. The hematite arm still needs mumax⁺ 1.2.2
 | The local material series has no reportable decay length | (S) | **done here — r² 0.001–0.004** |
 | The CPW antenna is a diamond/lens-shaped flared launch at the x = 0 edge, not a y = 0 stripe | (S) | **corrected, `tools/probe_antenna.py`** |
 | Stage B deck exists, was executed on the MX130, and its honest outcome (r² ≈ 0.002; element contrast 0.955) is recorded; no switching claim | (S)/(A) | run and reported; not yet run at full element resolution |
+| Stage C shoot-out (5 materials, Kaggle T4): f_dom per material, no in-bus attenuation, v_g not resolved at this SNR | (S) | **done — §4, PROVENANCE §2.7** |
+| Stage D hematite arm (mumax⁺ 1.2.2, Kaggle T4): gap matched 12.97 vs 12.78 GHz (E), ℓ > 2.5 mm in-bus, v_g not resolved (standing mode), nonlinear angle transient caveat | (S) | **done — §4b, PROVENANCE §2.8** |
 | The write-amplification metric W = cells/E_event is the headline quantity | (E)/(L) | defined in `docs/CREDIBILITY_PLAN.md` §2 |
 | Any claim of a fabricated or measured device | — | **not claimed anywhere in this repository** |
 

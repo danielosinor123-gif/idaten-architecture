@@ -330,7 +330,81 @@ Reading: f_dom increases with Msat; no material attenuates within the 100 µm
 bus at this drive; with only ~8 cycles at ~10⁻⁴ amplitude in a 4 ns window,
 group velocity is **not resolved** — longer run is the follow-up. The
 hematite (α-Fe₂O₃) arm needs mumax⁺ 1.2.2 (AF Néel model) and is **not**
-in this run.
+in this run — it is §2.8 below.
+
+### 2.8 Stage D — hematite (α-Fe₂O₃) AF bus, mumax⁺ 1.2.2 on Kaggle (19 Nov 2026, (S))
+
+Kernel `danielvking/idaten-hematite-mumaxplus` (v6; deck dataset
+`danielvking/idaten-hematite-assets`). The solver is the PyPI wheel
+`mumaxplus==1.2.2` (GPL-3.0-only), pip-installed inside the kernel
+(`enable_internet: true`, FP32/SINGLE), on the T4 (sm_75 — the wheel's
+embedded PTX targets sm_52 only and JITs under the T4's CUDA 13.0; the
+local MX130 sm_61 cannot, so **all mumax⁺ runs go to Kaggle**; GPU sanity
+check printed `GPU_SANITY_OK`). Deck
+`tools/decks/idaten_hematite_mumaxplus.py`: 1000×80×1 cells @ 100 nm
+(100 µm × 8 µm × 100 nm bus), **fixed solver dt = 0.2 ps**, 100 ps settle,
+8 ns run, table every 20 ps, **200 probes at 0.5 µm spacing**
+(x = 0.25…99.75 µm); z-stripe RF launch at x ≈ 1 µm; burst window 0.5–3 ns.
+
+Parameter mapping (derived from the v1.2.2 source `src/physics/afmexchange.cu`):
+`afmex_cell = −H_E·Ms·latcon²/4 = −5.85×10⁻¹¹ J/m`,
+`afmex_nn = −A_T·Ms = −8.24×10⁻¹² J/m`, with (L) inputs
+Ms_sub = 9.0×10⁵ A/m, α = 1.1×10⁻⁵ (PRM 7, 054407), H_E = 1040 T
+(arXiv:2610.08030), latcon = 0.5 nm, μ₀A = 9.153×10⁻⁶ T·µm²
+(arXiv:2212.11887), easy-plane H_a = 1 Oe = 79.58 A/m
+(`ku1 = −0.5·Ms·H_a` — mumax⁺'s anisotropy-field kernel carries no μ₀, so
+ku1 is in internal-field units, probe-verified in `anisotropy.cu`),
+30 mT bias along x, Néel vector along y. Documented deviations:
+**DMI = 0** and **demagnetisation disabled** ((E): net M ~ Ms·H/H_E
+~ 10⁻⁵ Ms).
+
+Predicted (E): qFM gap f_gap = γ√(2H_E·μ₀H_a)/2π ≈ **12.78 GHz**;
+v_g,max = γ√(2H_E·A_T) ≈ **24.3 km/s** vs (L) 10–23 km/s (Hamdi, Posva &
+Grundler, PRM 7, 054407 (2023)).
+
+Two arms, one full 8 ns run each (deck rc=0; 268 s and 255 s wall on the T4;
+a kernel running both arms back-to-back is CANCEL_ACKNOWLEDGED at ~9–10 min
+total, so v6 ran the credibility-critical 15 GHz arm first; the 1.70 GHz
+arm is from v5, also rc=0):
+
+| Arm | (S) result |
+|---|---|
+| 1.70 GHz, 1 mT — below the (E) gap | forced/evanescent response only: dispersion-ridge points f ≈ 0.6–2.8 GHz, c₂/pred ≈ 0 — **consistent with the gap; no propagating branch below it** |
+| 15 GHz, 0.1 mT (= 1 Oe = H_a, linear regime) — above the gap | launcher probe f_dom **14.23 GHz** vs 15 GHz drive; **global ring-down 12.97 GHz vs (E) gap 12.78 GHz — 1.5 % match, validating the afmex_cell ↔ H_E mapping**; end-field decay ℓ ≈ **2477 µm ≫ 100 µm bus** (no in-bus attenuation; cf. (L) ℓ = 1.1 cm at 30 mT) |
+
+Measured (S) for both arms in `data/hematite_kaggle/hematite_summary.json`
+(analysis `tools/analyze_hematite.py`; raw tables, end-field `neel_end.npz`
+snapshots and the kernel log under `data/hematite_kaggle/`):
+
+- **v_g NOT resolved.** Cross-correlation lags between adjacent probes
+  (0.5 µm spacing, 198 pairs) have spread ≫ median (15 GHz arm: median
+  221 m/s, spread 4.1 km/s); packet-arrival times are simultaneous
+  (t ≈ 3.0 ns) at all probes — the ring-down is a **standing/global mode**,
+  not a traveling packet, so no group velocity is extractable from this
+  window. The 2-D FFT dispersion ridge (89 k-points) is dominated by
+  standing-wave peaks (f_gap fit 16.7 GHz, c₂/pred = 0.07), not the
+  propagating branch. Follow-up: longer run + windowed launch.
+- **AFM-order caveat (S):** intracell angle transient min **2.33° at
+  t = 0.14 ns** (local order collapse at burst onset); post-burst mean
+  123°, max 169–174°. The drive pushes the AFM locally nonlinear; the
+  linear-regime numbers above carry this caveat.
+- **Energy:** e_total changes < 0.5 % over 8 ns in both arms
+  (−6.8204×10⁻⁸ → −6.8547×10⁻⁸ J at 1.70 GHz; −6.8204×10⁻⁸ →
+  −6.7947×10⁻⁸ J at 15 GHz) — no numerical runaway; the 15 GHz arm's sign
+  is not cleanly dissipative (drive work during the burst), stated as-is.
+- probe RMS vs x is flat-to-rising (15 GHz arm: 0.27 → 0.37) — the same
+  standing-mode signature, not a 1/e decay.
+
+Deck fixes probe-verified on the T4 before the successful runs:
+FieldQuantity/ScalarQuantity wrappers are callable, so `quant()`/`sub()`
+check `_impl` rather than `callable()`; fixed-timestep mode
+(`timesolver.adaptive_timestep = False`, dt = 2×10⁻¹³ s) because the
+adaptive stepper near equilibrium can advance only one clamped step per
+`run(dur)`; an FP32 guard on the final `run()` chunk (stoptime − t rounds
+to ≤ 0 at ulp(t) ≈ 5×10⁻¹⁶ s near t = 8 ns, which otherwise throws
+"timestep ≤ 0"); `afm.bias_magnetic_field` returns sub1's Parameter, so
+the static bias and the RF time term are set on **both** sublattices
+individually.
 
 ---
 
