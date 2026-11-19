@@ -1,0 +1,176 @@
+{
+  "deck": "tools/decks/idaten_stageC_template.mx3",
+  "drive_f0_GHz_L": 1.7,
+  "materials": {
+    "BiYIG": {
+      "material": "BiYIG",
+      "table_rows": 122,
+      "t_span_ns": 4.0,
+      "f_dom_probe0_GHz": 1.9291,
+      "f_dom_probe7_GHz": 1.9291,
+      "probe_rms": [
+        0.00072773,
+        0.00041606,
+        0.00045949,
+        0.00035761,
+        0.00055612,
+        0.00030145,
+        0.00020473,
+        7.767e-05
+      ],
+      "xcorr_lag_samples": [
+        -2,
+        -2,
+        2,
+        2,
+        -1,
+        -3,
+        -3
+      ],
+      "v_g_xcorr_m_s": -106207.1,
+      "v_g_xcorr_spread_m_s": 162706.4,
+      "v_g_pairs": 7,
+      "v_g_note": "cross-correlation lag medians; spread comparable to median means v_g is not resolved at this SNR/window",
+      "l_env_um": 41.94,
+      "l_env_fit_nprobes": 8,
+      "l_finish_bus_um": 97.69,
+      "env_bus_peak_x_um": 99.97
+    },
+    "CoFe": {
+      "material": "CoFe",
+      "table_rows": 201,
+      "t_span_ns": 4.0,
+      "f_dom_probe0_GHz": 2.9368,
+      "f_dom_probe7_GHz": 7.8315,
+      "probe_rms": [
+        0.0001458,
+        4.893e-05,
+        1.149e-05,
+        9.91e-06,
+        1.065e-05,
+        7.23e-06,
+        2.928e-05,
+        5.511e-05
+      ],
+      "xcorr_lag_samples": [
+        129,
+        11,
+        -82,
+        -3,
+        38,
+        65,
+        -37
+      ],
+      "v_g_xcorr_m_s": 3920.3,
+      "v_g_xcorr_spread_m_s": 64408.1,
+      "v_g_pairs": 7,
+      "v_g_note": "cross-correlation lag medians; spread comparable to median means v_g is not resolved at this SNR/window",
+      "l_env_um": 119.14,
+      "l_env_fit_nprobes": 7,
+      "l_finish_bus_um": null,
+      "env_bus_peak_x_um": 99.97
+    },
+    "GdFeCoP": {
+      "material": "GdFeCoP",
+      "table_rows": 201,
+      "t_span_ns": 4.0,
+      "f_dom_probe0_GHz": 3.5481,
+      "f_dom_probe7_GHz": 2.6611,
+      "probe_rms": [
+        0.00016956,
+        0.0001069,
+        2.711e-05,
+        1.577e-05,
+        4.405e-05,
+        3.002e-05,
+        5.246e-05,
+        0.00014832
+      ],
+      "xcorr_lag_samples": [
+        20,
+        21,
+        12,
+        0,
+        0,
+        -7,
+        -5
+      ],
+      "v_g_xcorr_m_s": 23373.9,
+      "v_g_xcorr_spread_m_s": 56768.2,
+      "v_g_pairs": 5,
+      "v_g_note": "cross-correlation lag medians; spread comparable to median means v_g is not resolved at this SNR/window",
+      "l_env_um": 265.56,
+      "l_env_fit_nprobes": 8,
+      "l_finish_bus_um": null,
+      "env_bus_peak_x_um": 99.97
+    },
+    "NiFe": {
+      "material": "NiFe",
+      "table_rows": 201,
+      "t_span_ns": 4.0,
+      "f_dom_probe0_GHz": 7.6788,
+      "f_dom_probe7_GHz": 7.6788,
+      "probe_rms": [
+        2.81e-05,
+        6.74e-06,
+        4.31e-06,
+        3.94e-06,
+        5.28e-06,
+        3.81e-06,
+        3.94e-06,
+        5.59e-06
+      ],
+      "xcorr_lag_samples": [
+        20,
+        -10,
+        -18,
+        -1,
+        -2,
+        26,
+        2
+      ],
+      "v_g_xcorr_m_s": -27267.4,
+      "v_g_xcorr_spread_m_s": 215893.6,
+      "v_g_pairs": 7,
+      "v_g_note": "cross-correlation lag medians; spread comparable to median means v_g is not resolved at this SNR/window",
+      "l_env_um": 59.78,
+      "l_env_fit_nprobes": 8,
+      "l_finish_bus_um": null,
+      "env_bus_peak_x_um": 99.92
+    },
+    "YIG": {
+      "material": "YIG",
+      "table_rows": 102,
+      "t_span_ns": 4.0,
+      "f_dom_probe0_GHz": 1.9342,
+      "f_dom_probe7_GHz": 1.9342,
+      "probe_rms": [
+        0.00027521,
+        0.00012236,
+        0.00019937,
+        0.00010202,
+        0.00024043,
+        8.826e-05,
+        0.00012059,
+        5.118e-05
+      ],
+      "xcorr_lag_samples": [
+        -1,
+        11,
+        -11,
+        1,
+        -1,
+        10,
+        12
+      ],
+      "v_g_xcorr_m_s": 21553.2,
+      "v_g_xcorr_spread_m_s": 167565.4,
+      "v_g_pairs": 7,
+      "v_g_note": "cross-correlation lag medians; spread comparable to median means v_g is not resolved at this SNR/window",
+      "l_env_um": 62.52,
+      "l_env_fit_nprobes": 8,
+      "l_finish_bus_um": null,
+      "env_bus_peak_x_um": 99.97
+    }
+  }
+}

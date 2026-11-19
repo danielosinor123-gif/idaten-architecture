@@ -424,10 +424,28 @@ Which side wins for a given workload is a **workload question**, which is
 why the workload is frozen first (architecture Gate 0) and why notebook 02
 answers it on a concrete task.
 
-**Status: Stage C is not run in this repository yet.** mumax⁺ 1.2.2 is not
-installed; the MX130 may not hold the hematite grid; the decks are written
-but unexecuted. The disciplined order is: Stage A reproducibility → Stage B
-pattern code → Stage C portfolio → mumax⁺ hematite.
+**Status: Stage C mumax³ shoot-out RUN COMPLETE (19 Nov 2026, Kaggle T4,
+kernel `danielvking/idaten-stage-c-mumax` v4; assets
+`danielvking/idaten-stagec-assets`).** Identical 100 µm × 8 µm bare bus +
+64 result elements, 1.70 GHz / 1 mT burst, 4 ns, per material
+(YIG/Bi-YIG/CoFe/GdFeCoP/NiFe). Measured (S), in
+`data/stageC_kaggle/stageC_summary.json` and
+`figures/stageC_material_shootout.png`:
+
+| Material | f_dom (S) | probe-RMS decay ℓ over 10–80 µm (S) | v_g (S) |
+|---|---|---|---|
+| YIG | 1.93 GHz (drive 1.70 GHz; Stage A measured 1.89 GHz) | ~63 µm fit, but far probe retains ~20 % of near — no strong attenuation within the bus | xcorr median ≈ 22 km/s, lag spread comparable to median → **not resolved** at this SNR/window |
+| Bi-YIG | 1.93 GHz | ~42 µm fit; flat profile, weakest decay | not resolved |
+| Co₂₅Fe₇₅ | 2.94 GHz | ~119 µm fit; mid-bus dip then rise | not resolved |
+| GdFeCoP | 3.55 GHz | ~266 µm fit; flat | not resolved |
+| NiFe | 7.68 GHz | ~60 µm fit; lowest amplitudes overall | not resolved |
+
+Honest reading: f_dom tracks Msat (higher-Msat materials ring higher), and
+no material attenuates the wave within the 100 µm bus at this drive — but
+the 4 ns window at ~2 GHz gives only ~8 cycles at probe amplitudes
+~10⁻⁴–10⁻³, so group velocity is **not resolved** from this run; a longer
+run is the stated follow-up. The hematite arm still needs mumax⁺ 1.2.2
+(not installed; no public binary checked yet) — unchanged.
 """),
 
 ("md", r"""

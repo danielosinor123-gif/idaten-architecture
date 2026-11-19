@@ -1,0 +1,57 @@
+//mumax 3.12 [linux_amd64 go1.22.4(gc) CUDA-12.0]
+//commit hash: 6e5c98bb
+//CPU info: Intel(R) Xeon(R) CPU @ 2.00GHz, Cores: 2, MHz: 2000.198
+//GPU info: Tesla T4(14911MB), CUDA Driver 13.0, cc=7.5, using cc=75 PTX
+//OS  info: Ubuntu 24.04.4 LTS, Hostname: cbba3a3c3771
+//Timestamp: 2026-11-19 03:07:27
+//(c) Arne Vansteenkiste, Dynamat LAB, Ghent University, Belgium
+//This is free software without any warranty. See license.txt
+//********************************************************************//
+//  If you use mumax in any work or publication,                      //
+//  we kindly ask you to cite the references in references.bib        //
+//********************************************************************//
+//output directory: deck.out/
+//starting GUI at http://127.0.0.1:35367
+SetGridSize(2000, 160, 1)
+SetCellSize(5e-08, 5e-08, 1.2e-06)
+// WARNING: cell size was set to a high aspect ratio.
+//          Calculation of demag kernel may take longer than usual.
+//          Note that this can exacerbate discretization anisotropy.
+OutputFormat = OVF2_TEXT
+Msat = 800.0e3
+Aex = 13.0e-12
+alpha = 1.0e-2
+magcount := 64
+mags := rect(100e-9, 50e-9).transl(60e-6, 2e-6, 0)
+for i := 1; i < magcount; i++ {
+	mags = mags.add(rect(100e-9, 50e-9).transl(60e-6+i*200e-9, 2e-6, 0))
+}
+DefRegion(252, mags)
+Msat.setregion(252, 800.0e3)
+Aex.setregion(252, 13.0e-12)
+alpha.setregion(252, 0.01)
+ext_scaleExchange(252, 0, 0.0)
+m = Uniform(1, 0, 0)
+B_ext = vector(20e-3, 0, 0)
+minimize()
+//Using cached kernel: /tmp/mumax3kernel_[2000 160 1]_[0 0 0]_[5e-08 5e-08 1.2e-06]_6_
+relax()
+saveas(m, "mStart.ovf")
+t0 := t
+f0 := 1.70e9
+B_ext.Add(LoadFile("antenna.ovf"), 1e-3*sin(2*pi*f0*(t-t0))*(tanh((t-t0-0.5e-9)/0.1e-9)-tanh((t-t0-3e-9)/0.1e-9)))
+nprobe := 8
+for p := 0; p < nprobe; p++ {
+	xc0 := 200 + 200*p
+	tableadd(Crop(m.Comp(2), xc0, xc0+80, 0, 80, 0, 1))
+}
+tableautosave(20e-12)
+autosave(m, 500e-12)
+run(4e-9)
+saveas(m, "Finish.ovf")
+//********************************************************************//
+//Please cite the following references, relevant for your simulation. //
+//See bibtex file in output folder for justification.                 //
+//********************************************************************//
+//   * Vansteenkiste et al., AIP Adv. 4, 107133 (2014).
+//   * Exl et al., J. Appl. Phys. 115, 17D118 (2014).

@@ -294,6 +294,44 @@ ORFS flow on the open sky130hd platform:
 Label: **PDK-backed open-flow layout** — never presented as the magnonic die
 (§5).
 
+### 2.7 Stage C — material-portfolio shoot-out, run on Kaggle (19 Nov 2026, (S))
+
+Kernel `danielvking/idaten-stage-c-mumax` (v4; dataset
+`danielvking/idaten-stagec-assets` with mumax³ 3.12 + CUDA-11 libs +
+`antenna.ovf` + deck template) ran the identical bare bus
+(2000×160×1 @ 50 nm = 100 µm × 8 µm, 64 NiFe result elements at x = 60 µm,
+CPW antenna launch, 1.70 GHz / 1 mT burst window 0.5–3 ns, `run(4e-9)`)
+once per bus material: YIG, Bi-YIG, CoFe, GdFeCoP, NiFe (parameters (L),
+inputs). All five `mumax exited rc=0`; deck.out `table.txt` (t, mx, my, mz
++ 8 x-probe mz averages every 20 ps) + `mStart/Finish.ovf` pulled to
+`data/stageC_kaggle/run_<mat>/deck.out/`; analysis `tools/analyze_stageC.py`
+→ `data/stageC_kaggle/stageC_summary.json`; figure
+`figures/stageC_material_shootout.png` (`tools/fig_stageC.py`).
+
+Deck fixes verified locally on mumax³ 3.12 before the successful run
+(`gdsii_run/smoke_stageC.sh`): `tableadd` takes one argument; the default
+table already carries t/mx/my/mz; probes are `tableadd(Crop(m.Comp(2),
+xc0, xc0+80, 0, 80, 0, 1))` (table stores the crop average); the
+`@MATERIAL_BLOCK@` placeholder must sit on its own line or the runner's
+first line (Msat) gets commented out; the burst window is anchored to
+post-relax `t0 := t`.
+
+Measured (S):
+
+| Material | f_dom (GHz) | probe-RMS decay fit ℓ (µm, 10–80 µm) | v_g |
+|---|---|---|---|
+| YIG | 1.93 | ~63 (far probe still ~20 % of near) | xcorr median ≈ 21.6 km/s but lag spread ≈ median → not resolved |
+| Bi-YIG | 1.93 | ~42, flat | not resolved |
+| CoFe | 2.94 | ~119 | not resolved |
+| GdFeCoP | 3.55 | ~266, flat | not resolved |
+| NiFe | 7.68 | ~60, lowest amplitudes | not resolved |
+
+Reading: f_dom increases with Msat; no material attenuates within the 100 µm
+bus at this drive; with only ~8 cycles at ~10⁻⁴ amplitude in a 4 ns window,
+group velocity is **not resolved** — longer run is the follow-up. The
+hematite (α-Fe₂O₃) arm needs mumax⁺ 1.2.2 (AF Néel model) and is **not**
+in this run.
+
 ---
 
 ## 3. (L) — Literature values used
