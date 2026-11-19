@@ -1,0 +1,60 @@
+name: Challenge a claim
+about: >-
+  Dispute or question any number, tag, or claim in this repository. This is
+  the most valuable issue type we get — please use it.
+labels: [claim-check]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: "The claim being challenged"
+      description: "File + line/section, and the exact sentence or number"
+      placeholder: "PROVENANCE.md §2.8: 'global ring-down 12.97 GHz'"
+    validations:
+      required: true
+  - type: dropdown
+    id: tag
+    attributes:
+      label: "Evidence tag it currently carries"
+      options: ["(L) literature", "(S) simulated", "(E) engineering estimate", "(A) predicted", "untagged"]
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: "Why you think it is wrong or over-claimed"
+      description: "Cite a source if you have one; say what would change your mind"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: "Reproduction attempt (optional)"
+      description: "Command you ran, tool version, what you observed"
+    validations:
+      required: false
+---
+name: Reproduction request / result
+about: Report running any deck, notebook, or layout flow from this repo — pass or fail.
+labels: [reproduction]
+body:
+  - type: input
+    id: artifact
+    attributes:
+      label: "What you ran"
+      placeholder: "e.g. tools/decks/idaten_stageC_template.mx3 on an RTX 4090, or the Stage A deck on Kaggle"
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: "Result (numbers welcome)"
+    validations:
+      required: true
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: "Outcome"
+      options: ["reproduced", "partially reproduced", "not reproduced", "could not run"]
+    validations:
+      required: true

@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+type: software
+title: "Idaten Ce100 — Pattern-Coded Magnonic Execution: credibility spine (sims, benchmark, GDS, PPA)"
+abstract: >-
+  Research artifact set for a pattern-coded magnonic execution architecture:
+  spin-wave compute writing a persistent magnetic result pattern, read once
+  at workload end. Includes mumax3/mumax+ simulation evidence (Kaggle T4),
+  an ORFS/sky130hd open-flow GDS layout, an AI+chemistry benchmark, and a PPA
+  ledger. Every claim is tagged (A) predicted / (E) engineering estimate /
+  (S) simulated / (L) literature in PROVENANCE.md.
+authors:
+  - family-names: "Idaten Ce100 contributors"
+    alias: "danielosinor123-gif"
+repository-code: "https://github.com/danielosinor123-gif/idaten-architecture"
+license: MIT
+version: "0.1.0"
+date-released: "2026-11-19"
+keywords:
+  - spintronics
+  - magnonics
+  - spin-wave computing
+  - MRAM
+  - antiferromagnetic spintronics
+  - open-source hardware
+references:
+  - type: article
+    title: "Magnon-assisted switching of nanomagnets by spin waves" 
+    authors:
+      - family-names: Baumgaertl
+      - family-names: Grundler
+    journal: "Nature Communications"
+    volume: "14"
+    pages: "1490"
+    year: 2023
+    doi: "10.1038/s41467-023-37246-1"
+  - type: article
+    title: "Giant anisotropy of the magnetic damping in alpha-Fe2O3 probed by the spin Seebeck effect / BLS"
+    authors:
+      - family-names: Hamdi
+      - family-names: Posva
+      - family-names: Grundler
+    journal: "Physical Review Materials"
+    volume: "7"
+    pages: "054407"
+    year: 2023

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Ask a question / discuss
+    url: https://github.com/danielosinor123-gif/idaten-architecture/discussions
+    about: "General questions and discussion — please use Discussions first"
+  - name: Challenge a claim or report a reproduction
+    url: https://github.com/danielosinor123-gif/idaten-architecture/issues/new?template=claims_and_repro.yml
+    about: "Dispute any (L)/(S)/(E)/(A) number, or report your own run"
