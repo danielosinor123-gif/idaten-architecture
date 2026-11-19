@@ -1,30 +1,43 @@
-# openflow/ — SKY130 / OpenROAD Flow Scripts layout (pending)
+# openflow/ — SKY130 / OpenROAD Flow Scripts layout (COMPLETE)
 
-This directory is reserved for the **PDK-backed open-flow** artifact: the
-physical instantiation of `P₀` (fixed switch/transistor topology) and the
-`C_k` configuration switches, on the open SkyWater 130 nm PDK through
-OpenROAD Flow Scripts (ORFS).
+This directory documents the **PDK-backed open-flow** artifact: the physical
+instantiation of `P₀` (fixed switch/transistor topology) and the `C_k`
+configuration switches, on the open SkyWater 130 nm PDK through OpenROAD Flow
+Scripts (ORFS).
 
-**Status: not present in this checkout.** It must not be described as
-complete. The open-flow run has been obstructed by disk pressure in the WSL
-development VM; the VHDX cleanup freed ≈ 25 GB of logical space, but the
-file itself cannot be shrunk safely on this machine (`wsl --manage …
---set-sparse` reports sparse support is disabled due to potential data
-corruption; it was **not** forced). The ORFS build tree under `/root/orfs`
-and the OpenROAD source under `/root/openroad-src` are retained.
+**Status: run complete (2026-11-19).** The final GDS/DEF/Verilog/SPEF, the
+design sources, the stage reports, and the full run manifest are in
+`gds/idaten_sky130/` (see `gds/idaten_sky130/RUN_MANIFEST.md`). Layout figure:
+`figures/idaten_sky130_layout.png`. Headline flow results (S): FLOW_EXIT=0,
+DRC 0 violations, antenna 0 violations, WNS/TNS 0.00 ns (Fmax 140.87 MHz vs
+10 ns constraint), design area 14,420 um² at 32% utilization.
 
-When the run completes, `gds/idaten_sky130/` will hold the final DEF/GDS and
-this README will be replaced with the run manifest. The artifact will be
-labelled **PDK-backed open-flow layout** and will never be presented as the
-magnonic die, which has no PDK.
+The artifact is labelled **PDK-backed open-flow layout** and is never
+presented as the magnonic die, which has no PDK — that artifact is
+`gds/idaten_concept_mask/` ("concept mask, no PDK exists for hematite/LiNbO₃
+patterning").
 
-Reproduction outline:
+## Toolchain used (all free/open, $0)
+
+- ORFS master (codeload tarball), platform `sky130hd` (sky130A PDK bundled).
+- OpenROAD built from source locally (`/root/openroad-src`, BUILD_EXIT=0,
+  headless GUI patches marked `IDATEN_GUI_PATCH*`).
+- Yosys 0.71 from conda-forge (TCL enabled; ORFS scripts are Tcl).
+- KLayout 0.30.12 (conda env).
+
+## Reproduce
 
 ```bash
-cd /root/orfs                       # OpenROAD Flow Scripts
-./flow.sh -design idaten_sky130     # 22 nm SkyWater 130 nm PDK
+cd /root/orfs_run/idaten   # any empty work dir
+env OPENROAD_EXE=/root/eda/orfs-tools/bin/openroad \
+    OPENSTA_EXE=/root/eda/orfs-tools/bin/sta \
+    YOSYS_EXE=/root/eda/envy/bin/yosys \
+    KLAYOUT_CMD=/root/eda/envk/bin/klayout \
+    PYTHON_EXE=/usr/bin/python3 \
+    LD_LIBRARY_PATH=/root/eda/build-env/lib:/root/eda/ortools-cpp/lib:/root/eda/envy/lib \
+  make -f /root/orfs/flow/Makefile \
+    DESIGN_CONFIG=/root/orfs/flow/designs/sky130hd/idaten_sky130/config.mk
 ```
 
-and then copy `build/.../6_final.gds` into `../gds/idaten_sky130/` with a
-manifest recording the ORFS commit, PDK revision, tool versions, and the
-checks that passed.
+(The earlier `./flow.sh -design ...` entry point is a per-stage helper in this
+ORFS revision; the Makefile with `DESIGN_CONFIG` is the supported entry.)

@@ -273,6 +273,27 @@ size, deleted, and recompiled. This is recorded because the failure mode
 cost a full debug cycle — any re-run on this machine should check for
 zero-byte build products first.
 
+### 2.6 PDK-backed open-flow layout — ORFS / sky130hd run (19 Nov 2026, (S))
+
+The digital tier (`P₀` MAC pipeline + `C_k` config register + `M_k` result
+register, `gds/idaten_sky130/src/idaten_sky130.v`) was taken through the full
+ORFS flow on the open sky130hd platform:
+
+| Quantity | Value |
+|---|---|
+| Entry | `make -f /root/orfs/flow/Makefile DESIGN_CONFIG=.../sky130hd/idaten_sky130/config.mk` (FLOW_EXIT=0, 14 min) |
+| OpenROAD | built from source 2026-11-19 (`/root/openroad-src`, BUILD_EXIT=0/INSTALL_EXIT=0), headless GUI patches `IDATEN_GUI_PATCH*` |
+| Yosys | 0.71+ conda-forge, TCL 8.6 (ORFS scripts are Tcl; yowasp-yosys WASM build cannot run them) |
+| KLayout | 0.30.12 |
+| PDK | sky130A files bundled with ORFS (`flow/platforms/sky130hd/`) |
+| Timing | constraint 10 ns; WNS 0.00, TNS 0.00, worst slack 2.90 ns, Fmax 140.87 MHz |
+| DRC / antenna | 0 violations (DRT-0199), 0 net / 0 pin antenna violations |
+| Area | design 14,420 µm² (32% util) in a 216.3 × 216.3 µm die; 6,864 cells |
+| Outputs | `gds/idaten_sky130/6_final.{gds,def,v,spef}` (GDS MD5 `ebe60559d93183e20a403abe5941e58c`), reports in `gds/idaten_sky130/reports/`, manifest `gds/idaten_sky130/RUN_MANIFEST.md` |
+
+Label: **PDK-backed open-flow layout** — never presented as the magnonic die
+(§5).
+
 ---
 
 ## 3. (L) — Literature values used

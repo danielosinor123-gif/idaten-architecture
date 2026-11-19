@@ -1,0 +1,40 @@
+        -rd tech_file=./objects/sky130hd/idaten_sky130/base/klayout.lyt \
+        -rd layer_map= \
+        -r /root/orfs/flow/util/def2stream.py
+KLayout 0.30.12
+[INFO] Reporting cells prior to loading DEF ...
+	/root/orfs/flow/platforms/sky130hd/gds/sky130_fd_sc_hd.gds
+[INFO] All LEF cells have matching GDS/OAS cells
+[INFO] No orphan cells in the final layout
+Elapsed time: 0:04.71[h:]min:sec. CPU time: user 2.03 sys 2.28 (91%). Peak memory: 119276KB.
+cp results/sky130hd/idaten_sky130/base/6_1_merged.gds results/sky130hd/idaten_sky130/base/6_final.gds
+./logs/sky130hd/idaten_sky130/base
+Log                    Ext     Elapsed      CPU     CPU/ Peak Mem sha1sum
+                                     s        s  Elapsed       MB [0:10)
+1_1_yosys_canonicalize .rtlil        0        1     0.80       38 c8785e7c0c
+1_2_yosys              .v           25       28     1.07       46 76afa163e1
+1_2_yosys              .sdc                                       aaac346901
+1_synth                .odb          3        3     0.97      108 60f92fb9fb
+1_synth                .sdc                                       1b3bdba219
+2_1_floorplan          .odb          4        4     1.06      111 b3e0e1db07
+2_1_floorplan          .sdc                                       1b3bdba219
+2_2_floorplan_macro    .odb          2        2     1.00      104 b3e0e1db07
+2_3_floorplan_tapcell  .odb          3        4     1.02      104 f8bba877a6
+2_4_floorplan_pdn      .odb          2        3     1.09      110 3c2b762edf
+3_1_place_gp_skip_io   .odb          8       11     1.33      109 c65123faaa
+3_2_place_iop          .odb          3        4     1.10      105 a21b2c3f0f
+3_3_place_gp           .odb         15       22     1.37      326 22533bdd9e
+3_4_place_resized      .odb          5        7     1.19      222 22533bdd9e
+3_5_place_dp           .odb         17       16     0.94      218 2798a008c4
+4_1_cts                .odb          9       12     1.23      236 d432f945cd
+5_1_grt                .odb         68      227     3.33      257 a5ba84fb4f
+5_1_grt                .sdc                                       84f7c53f50
+5_2_route              .odb        562     1212     2.16      849 83530ef4a0
+5_3_fillcell           .odb          2        3     1.11      116 d147120975
+6_1_fill               .odb          3        4     1.11      109 d147120975
+6_1_fill               .sdc                                       84f7c53f50
+6_1_merge                            4        4     0.92      116 N/A
+6_report                            13       15     1.11      141 N/A
+Total                              748     1583     2.08      849
+FLOW_EXIT=0
+=== ORFS make-run finished: Thu Nov 19 00:59:30 WAT 2026 ===
