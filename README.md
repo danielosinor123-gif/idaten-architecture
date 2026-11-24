@@ -40,6 +40,7 @@ architecture paper this work follows.
 | a **foundry engineer** (IMEC-class) | [`docs/CREDIBILITY_PLAN.md`](docs/CREDIBILITY_PLAN.md) §4 | *Can you make this on 300 mm, in my process, above my logic?* |
 | a **deep-tech accelerator** (Silicon Catalyst-class) | [`docs/ONE_PAGER.md`](docs/ONE_PAGER.md) → [`docs/KILL_CRITERIA.md`](docs/KILL_CRITERIA.md) | *What do you measure, by when, and what kills the project?* |
 | **anyone** | [`PROVENANCE.md`](PROVENANCE.md) | *Where does every number come from?* |
+| **reading the paper itself** | [`docs/idaten-ce100-architecture-paper-rev-2026-11-24.md`](docs/idaten-ce100-architecture-paper-rev-2026-11-24.md) — current revision, 24 Nov 2026 (evidence revision: §2A, §8 gate status, Appendix A ledger); rev. 16 Nov 2026 kept at [`docs/idaten-ce100-architecture-paper.md`](docs/idaten-ce100-architecture-paper.md) | *What is proposed, and what evidence exists today?* |
 
 ### The one metric everything depends on
 
@@ -360,4 +361,7 @@ shell scripts so that quoting is never mangled by the Windows shell.
 - The architecture document that defines the four state objects, the R0–R6
   ladder, Gate 0–8, the §9 energy ledger and the §10 guidance is
   *Idaten Ce100: Pattern-Coded Magnonic Execution, Persistent Magnetic Results,
-  and Dynamic Rails*, rev. 16 Nov 2026.
+  and Dynamic Rails*, current revision **24 Nov 2026**
+  ([`docs/idaten-ce100-architecture-paper-rev-2026-11-24.md`](docs/idaten-ce100-architecture-paper-rev-2026-11-24.md));
+  prior rev. 16 Nov 2026:
+  [`docs/idaten-ce100-architecture-paper.md`](docs/idaten-ce100-architecture-paper.md).
